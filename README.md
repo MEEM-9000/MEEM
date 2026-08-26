@@ -1,4 +1,4 @@
-# '\MEEM' — Elke & Mark
+# 'MEEM' — Elke & Mark
 
 A simple, atmospheric GitHub Pages homepage built around Meem's live performance photograph.
 
