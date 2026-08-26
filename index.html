@@ -1,112 +1,136 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>MEEM</title>
-
-    <meta name="description"
-          content="MEEM – Original Poetry and Music.">
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meem — Elke & Mark. Original poetic texts and music exploring love, loss and everything between.">
+  <title>MEEM — Elke & Mark</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-
-    <h1>MEEM</h1>
-
-    <nav>
-        <a href="#music">Music</a>
-        <a href="#live">Live</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
+<header class="site-header">
+  <a class="logo" href="#top">MEEM</a>
+  <nav aria-label="Main navigation">
+    <a href="#music">Music</a>
+    <a href="#meem">Meem</a>
+    <a href="#live">Live</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
+<main id="top">
 
-<main>
+  <section class="hero">
+    <img class="hero-image" src="images/meem-hero.jpg" alt="Meem performing outdoors, with Elke singing and Mark playing saxophone">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="eyebrow">ELKE &amp; MARK</p>
+      <h1>MEEM</h1>
+      <p class="tagline">Words. Music. Love. Sorrow.</p>
+      <a class="button" href="#music">Listen</a>
+    </div>
+    <p class="photo-credit">Photo © Luc Gevaert</p>
+  </section>
 
-<section class="hero">
+  <section id="meem" class="intro section">
+    <div class="intro-mark">M</div>
+    <div>
+      <p class="eyebrow">MEEM</p>
+      <h2>Where words meet music.</h2>
+      <p class="lead">
+        Elke and Mark bring together original poetic texts and music in an
+        intimate, sometimes playful and sometimes melancholic conversation.
+      </p>
+      <p>
+        Their work explores the things that stay with us: love and loss,
+        memory and desire, tenderness and the small absurdities of everyday life.
+      </p>
+    </div>
+  </section>
 
-    <h2>Music without boundaries</h2>
+  <section id="music" class="music section">
+    <div class="section-title">
+      <p class="eyebrow">MUSIC</p>
+      <h2>Listen</h2>
+    </div>
 
-    <p>
-        Jazz, blues and original music from Ghent, Belgium.
+    <div class="player-card">
+      <div class="track-number">01</div>
+      <div class="track-info">
+        <h3>Meem — Live</h3>
+        <p>Original words &amp; music</p>
+      </div>
+      <audio controls preload="metadata">
+        <source src="audio/meem-live.mp3" type="audio/mpeg">
+        Your browser does not support audio playback.
+      </audio>
+    </div>
+
+    <p class="placeholder-note">
+      Replace the audio file with one of Meem's recordings.
     </p>
+  </section>
 
-    <a class="button" href="#music">
-        Listen
-    </a>
+  <section id="live" class="live section">
+    <div class="section-title">
+      <p class="eyebrow">LIVE</p>
+      <h2>Come and listen.</h2>
+    </div>
 
-</section>
+    <div class="live-copy">
+      <p>
+        Meem is at its best in a room, garden or small stage where the audience
+        can become part of the conversation.
+      </p>
+    </div>
 
+    <div class="event-list">
+      <article class="event">
+        <div class="event-date"><strong>12</strong><span>OCT 2026</span></div>
+        <div>
+          <h3>Meem — Live</h3>
+          <p>Venue · Ghent, Belgium</p>
+        </div>
+        <a href="#" class="event-link">Details</a>
+      </article>
 
-<section id="music">
+      <article class="event">
+        <div class="event-date"><strong>07</strong><span>NOV 2026</span></div>
+        <div>
+          <h3>Meem — Acoustic Evening</h3>
+          <p>Venue · Belgium</p>
+        </div>
+        <a href="#" class="event-link">Details</a>
+      </article>
+    </div>
+  </section>
 
-    <h2>Music</h2>
+  <section class="photo-break">
+    <img src="images/meem-hero.jpg" alt="Meem performing to an outdoor audience">
+    <div class="photo-caption">
+      <span>MEEM</span>
+      <span>Elke &amp; Mark</span>
+    </div>
+  </section>
 
-    <p>
-        Our music combines jazz, blues and contemporary influences.
-    </p>
+  <section id="contact" class="contact section">
+    <p class="eyebrow">CONTACT</p>
+    <h2>For bookings, collaborations<br>or simply to say hello.</h2>
+    <a class="email" href="mailto:hello@meem-music.be">hello@meem-music.be</a>
 
-    <!-- Spotify / Bandcamp / YouTube can go here -->
-
-</section>
-
-
-<section id="live">
-
-    <h2>Live</h2>
-
-    <h3>Upcoming performances</h3>
-
-    <p>
-        12 September 2026 – Ghent Jazz Club
-    </p>
-
-</section>
-
-
-<section id="about">
-
-    <h2>About</h2>
-
-    <p>
-        The Band Name is a new ensemble based in Belgium,
-        bringing together...
-    </p>
-
-</section>
-
-
-<section id="contact">
-
-    <h2>Contact</h2>
-
-    <p>
-        For bookings and enquiries:
-    </p>
-
-    <a href="mailto:booking@example.com">
-        booking@example.com
-    </a>
-
-</section>
+    <div class="socials">
+      <a href="#">YouTube</a>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+    </div>
+  </section>
 
 </main>
 
-
 <footer>
-
-    <p>
-        © 2026 The Band Name
-    </p>
-
+  <span>MEEM — Elke &amp; Mark</span>
+  <span>Photo © Luc Gevaert</span>
 </footer>
 
 </body>
