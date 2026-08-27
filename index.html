@@ -67,7 +67,53 @@ hero<!DOCTYPE html>
     </ol>
     </div>
   </section>
+
+  <script>  
+  const tracks = [
+    {title: "Song title 1":, file "audio/song-01.mp3"},
+    {title: "Song title 2":, file "audio/song-02.mp3"},
+    {title: "Song title 3":, file "audio/song-03.mp3"},
+    {title: "Song title 4":, file "audio/song-04.mp3"},
+    {title: "Song title 5":, file "audio/song-05.mp3"},
+    {title: "Song title 5":, file "audio/song-06.mp3"},
+    ];
+
+    const player = document.getElementByld("audioPlayer");
+    const nowPlaying = document.getElementByld("nowPlaying");
+    const buttons = document.querySelectorAll("#playlist Button");
+    let currentTrack=-1;
+
+    function loadTrack(index, autoplay = true){
+      currentTrack = index;
+      player.src = tracks[index].file
+      nowPlaying.textContent = 'Now playing: ${tracks[index].title}';
+      buttons.forEach((buttin,i) => {
+        button.classList.toggle("active", i===index?);
+        button.setAttribute("aria-current", i===index? "true" : "false");
+      });
+      if(autoplay) player.play().catch(() => {});
+    }
+
+    buttons.forEach(button =>{
+      button.addEventListener("click".() => loadTrack(Number(button.dataset.index)));
+    });
+
+    player.addEventListener("ended", () => {
+      If(currentTrack >=0 &&currentTrack <trackslength - 1) {
+     }
+    });
+  </script>
+</main>body>
       
+
+      
+
+                              
+
+
+        
+    
+  </script>
       #<div class="track-number">01</div>
       #<div class="track-info">
        # <h3>MEEM - Funky Afscheid</h3>
