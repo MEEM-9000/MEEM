@@ -1,16 +1,24 @@
-hero<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="MEEM — Elke & Mark. Original poetic texts and music exploring love, loss and everything between.">
+
+  <meta
+    name="description"
+    content="MEEM — Elke & Mark. Original poetic texts and music exploring love, loss and everything between."
+  >
+
   <title>MEEM — Elke & Mark</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header class="site-header">
   <a class="logo" href="#top">MEEM</a>
+
   <nav aria-label="Main navigation">
     <a href="#music">Music</a>
     <a href="#MEEM">MEEM</a>
@@ -19,189 +27,460 @@ hero<!DOCTYPE html>
   </nav>
 </header>
 
+
 <main id="top">
 
+  <!-- HERO -->
+
   <section class="hero">
-    <img class="hero-image" src="images/meem-hero.JPG" alt="Elke and Mark performing live">
+
+    <img
+      class="hero-image"
+      src="images/meem-hero.JPG"
+      alt="Elke and Mark performing live"
+    >
+
     <div class="hero-overlay"></div>
+
     <div class="hero-content">
+
       <p class="eyebrow">ELKE &amp; MARK</p>
+
       <h1>MEEM</h1>
-      <p class="tagline">Original Poetry, Music,Jazz, over Love, Loss and Sorrow.</p>
+
+      <p class="tagline">
+        Original Poetry, Music, Jazz, over Love, Loss and Sorrow.
+      </p>
+
       <a class="button" href="#music">Listen</a>
+
     </div>
-    <p class="photo-credit">Photo © Luc Gevaert</p>
+
+    <p class="photo-credit">
+      Photo © Luc Gevaert
+    </p>
+
   </section>
+
+
+  <!-- ABOUT MEEM -->
 
   <section id="MEEM" class="intro section">
+
     <div class="intro-mark">M</div>
+
     <div>
+
       <p class="eyebrow">MEEM</p>
+
       <h2>Where words meet music.</h2>
+
       <p class="lead">
-        Elke and Mark bring a performance in which original poetic texts and music are intertwined to create an intimate, sometimes playful, sometimes melancholic storyline.
+        Elke and Mark bring a performance in which original poetic texts
+        and music are intertwined to create an intimate, sometimes playful,
+        sometimes melancholic storyline.
       </p>
+
       <p>
-        Their work explores those things that resonate with us: love and loss,
-        memory and desire, tenderness and the small absurdities of everyday life.
+        Their work explores those things that resonate with us:
+        love and loss, memory and desire, tenderness and the small
+        absurdities of everyday life.
       </p>
+
     </div>
+
   </section>
+
+
+  <!-- MUSIC -->
 
   <section id="music" class="music section">
+
     <div class="section-title">
+
       <p class="eyebrow">MUSIC</p>
+
       <h2>Listen</h2>
+
     </div>
+
 
     <div class="playlist-container">
-      <p id="nowPlaying" class="now-playing">select a track</p>
-      <audio id=audioPlayer" controls preload="metadata"></audio>/audio>
-    <ol id="playlist"class = "playlist">
-      <li><button type="button"data-index="0"><span>01</span>Introduction</button>button></li>
-      <li><button type="button"data-index="1"><span>02</span>Song title 2</button>button></li>
-      <li><button type="button"data-index="2"><span>03</span>Song title 3</button>button></li>
-      <li><button type="button"data-index="3"><span>04</span>Song title 4</button>button></li>
-      <li><button type="button"data-index="4"><span>05</span>Song title 5</button>button></li>
-      <li><button type="button"data-index="5"><span>06</span>Song title 6</button>button></li>
-    </ol>
+
+      <p id="nowPlaying" class="now-playing">
+        Select a track
+      </p>
+
+
+      <!-- SINGLE AUDIO PLAYER -->
+
+      <audio
+        id="audioPlayer"
+        controls
+        preload="metadata"
+      >
+        Your browser does not support the audio player.
+      </audio>
+
+
+      <!-- PLAYLIST -->
+
+      <ol id="playlist" class="playlist">
+
+        <li>
+          <button type="button" data-index="0">
+            <span>01</span>
+            Introduction
+          </button>
+        </li>
+
+        <li>
+          <button type="button" data-index="1">
+            <span>02</span>
+            Doh
+          </button>
+        </li>
+
+        <li>
+          <button type="button" data-index="2">
+            <span>03</span>
+            Pupil
+          </button>
+        </li>
+
+        <li>
+          <button type="button" data-index="3">
+            <span>04</span>
+            Tol
+          </button>
+        </li>
+
+        <li>
+          <button type="button" data-index="4">
+            <span>05</span>
+            Funky Afscheid
+          </button>
+        </li>
+
+        <li>
+          <button type="button" data-index="5">
+            <span>06</span>
+            Perron
+          </button>
+        </li>
+
+      </ol>
+
     </div>
+
   </section>
 
-  <script>  
-  const tracks = [
-    {title: "Introduction":, file "Introduction_FINAL-b.mp3"},
-    {title: "Doh":, file "Doh.mp3"},
-    {title: "Pupil":, file "Pupil_FINAL-c.mp3"},
-    {title: "Tol":, file "Tol_FINAL-c.mp3"},
-    {title: "Funky Afscheid":, file "Funky_Afscheid_FINAL2c.mp3"},
-    {title: "Perron":, file "Perron_FINAL.mp3"},
+
+  <!-- MUSIC PLAYER JAVASCRIPT -->
+
+  <script>
+
+    const tracks = [
+
+      {
+        title: "Introduction",
+        file: "audio/Introduction_FINAL-b.mp3"
+      },
+
+      {
+        title: "Doh",
+        file: "audio/Doh.mp3"
+      },
+
+      {
+        title: "Pupil",
+        file: "audio/Pupil_FINAL-c.mp3"
+      },
+
+      {
+        title: "Tol",
+        file: "audio/Tol_FINAL-c.mp3"
+      },
+
+      {
+        title: "Funky Afscheid",
+        file: "audio/Funky_Afscheid_FINAL2c.mp3"
+      },
+
+      {
+        title: "Perron",
+        file: "audio/Perron_FINAL.mp3"
+      }
+
     ];
 
-    const player = document.getElementByld("audioPlayer");
-    const nowPlaying = document.getElementByld("nowPlaying");
-    const buttons = document.querySelectorAll("#playlist Button");
-    let currentTrack=-1;
 
-    function loadTrack(index, autoplay = true){
+    const player = document.getElementById("audioPlayer");
+
+    const nowPlaying = document.getElementById("nowPlaying");
+
+    const buttons = document.querySelectorAll(
+      "#playlist button"
+    );
+
+    let currentTrack = -1;
+
+
+    function loadTrack(index, autoplay = true) {
+
+      if (index < 0 || index >= tracks.length) {
+        return;
+      }
+
       currentTrack = index;
-      player.src = tracks[index].file
-      nowPlaying.textContent = 'Now playing: ${tracks[index].title}';
-      buttons.forEach((buttin,i) => {
-        button.classList.toggle("active", i===index?);
-        button.setAttribute("aria-current", i===index? "true" : "false");
+
+      player.src = tracks[index].file;
+
+      nowPlaying.textContent =
+        `Now playing: ${tracks[index].title}`;
+
+
+      buttons.forEach((button, i) => {
+
+        button.classList.toggle(
+          "active",
+          i === index
+        );
+
+        if (i === index) {
+
+          button.setAttribute(
+            "aria-current",
+            "true"
+          );
+
+        } else {
+
+          button.removeAttribute(
+            "aria-current"
+          );
+
+        }
+
       });
-      if(autoplay) player.play().catch(() => {});
+
+
+      if (autoplay) {
+
+        player.play().catch(() => {
+          // Browser may block autoplay until user interaction.
+        });
+
+      }
+
     }
 
-    buttons.forEach(button =>{
-      button.addEventListener("click".() => loadTrack(Number(button.dataset.index)));
+
+    buttons.forEach(button => {
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          const index =
+            Number(button.dataset.index);
+
+          loadTrack(index);
+
+        }
+      );
+
     });
 
-    player.addEventListener("ended", () => {
-      If(currentTrack >=0 &&currentTrack <trackslength - 1) {
-     }
-    });
-  </script>
-</main>body>
-      
+
+    player.addEventListener(
+      "ended",
+      () => {
+
+        if (
+          currentTrack >= 0 &&
+          currentTrack < tracks.length - 1
+        ) {
+
+          loadTrack(currentTrack + 1);
+
+        } else {
+
+          nowPlaying.textContent =
+            "End of playlist";
+
+          buttons.forEach(button => {
+            button.classList.remove("active");
+            button.removeAttribute("aria-current");
+          });
+
+          currentTrack = -1;
+
+        }
+
+      }
+    );
 
   </script>
-  <div class = "player-card">
-      <div class="track-number">01</div>
-      <div class="track-info">
-       <h3>Introduction</h3>
-       <p>Original words & music</p>
-        <div>
-          
-      <div class="track-number">02</div>
-      <div class="track-info">
-        <h3>MEEM - Funky Afscheid</h3>
-      <div class="track-number">03</div>
-      <div class="track-info">
-        <h3>MEEM - Funky Afscheid</h3>
-      <div class="track-number">04</div>
-      <div class="track-info">
-        <h3>MEEM - Funky Afscheid</h3>
-      <div class="track-number">05</div>
-      <div class="track-info">
-        <h3>MEEM - Funky Afscheid</h3>
-      <div class="track-number">06</div>
-      <div class="track-info">
-        <h3>MEEM - Funky Afscheid</h3>
-        <p>Original words &amp; music</p>
-      </div>
-      <audio controls preload="metadata">
-        <source src="audio/5. Funky_Afscheid_FINAL2c.mp3" type="audio/mp3">
-      </audio>
-    </div>
 
-    <p class="placeholder-note">
-    </p>
-  </section>
+
+  <!-- LIVE -->
 
   <section id="live" class="live section">
+
     <div class="section-title">
+
       <p class="eyebrow">LIVE</p>
+
       <h2>Come and listen.</h2>
+
     </div>
+
 
     <div class="live-copy">
+
       <p>
-        MEEM is at its best in a room, garden or small stage where the audience
-        can become part of the conversation. 
+        MEEM is at its best in a room, garden or small stage
+        where the audience can become part of the conversation.
       </p>
+
     </div>
+
 
     <div class="event-list">
+
       <article class="event">
-        <div class="event-date"><strong>12</strong><span>OCT 2026</span></div>
+
+        <div class="event-date">
+          <strong>12</strong>
+          <span>OCT 2026</span>
+        </div>
+
         <div>
+
           <h3>MEEM — Live</h3>
-          <p>Venue · Ghent, Belgium</p>
+
+          <p>
+            Venue · Ghent, Belgium
+          </p>
+
         </div>
-        <a href="#" class="event-link">Details</a>
+
+        <a href="#" class="event-link">
+          Details
+        </a>
+
       </article>
+
 
       <article class="event">
-        <div class="event-date"><strong>07</strong><span>NOV 2026</span></div>
-        <div>
-          <h3>MEEM — Poezie in de Tuin</h3>
-          <p>Venue · Merelbeke, Belgium</p>
+
+        <div class="event-date">
+          <strong>07</strong>
+          <span>NOV 2026</span>
         </div>
-        <a href="#" class="event-link">Details</a>
+
+        <div>
+
+          <h3>MEEM — Poezie in de Tuin</h3>
+
+          <p>
+            Venue · Merelbeke, Belgium
+          </p>
+
+        </div>
+
+        <a href="#" class="event-link">
+          Details
+        </a>
+
       </article>
+
     </div>
+
   </section>
 
-  <section class="photo-break"> 
-    <img src="images/sax-shaker-2.JPG" alt="MEEM performing to an outdoor audience">
-    
+
+  <!-- PHOTO BREAK -->
+
+  <section class="photo-break">
+
+    <img
+      src="images/sax-shaker-2.JPG"
+      alt="MEEM performing to an outdoor audience"
+    >
+
     <div class="photo-caption">
+
       <span>MEEM</span>
+
       <span>Elke &amp; Mark</span>
+
     </div>
+
   </section>
+
+
+  <!-- CONTACT -->
 
   <section id="contact" class="contact section">
+
     <p class="eyebrow">CONTACT</p>
-    <h2>For bookings, collaborations<br>or simply to say hello.</h2>
-    <a class="email" href="mailto:meme.booking.9000@gmail.com"</a>
+
+    <h2>
+      For bookings, collaborations
+      <br>
+      or simply to say hello.
+    </h2>
+
+
+    <a
+      class="email"
+      href="mailto:meme.booking.9000@gmail.com"
+    >
       meme.booking.9000@gmail.com
+    </a>
+
 
     <div class="socials">
-      <a href="https://youtu.be/FmABMNXdtu8?si=okjrL3DaHMp-kmoh">YouTube</a>
-      <a href="#">Instagram</a>
-      <a href="#">Sound Cloud</a>
+
+      <a
+        href="https://youtu.be/FmABMNXdtu8?si=okjrL3DaHMp-kmoh"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        YouTube
+      </a>
+
+      <a href="#">
+        Instagram
+      </a>
+
+      <a href="#">
+        SoundCloud
+      </a>
+
     </div>
+
   </section>
 
 </main>
 
+
+<!-- FOOTER -->
+
 <footer>
-  <span>MEEM — Elke &amp; Mark</span>
-  <span>Photo © Luc Gevaert</span>
+
+  <span>
+    MEEM — Elke &amp; Mark
+  </span>
+
+  <span>
+    Photo © Luc Gevaert
+  </span>
+
 </footer>
+
 
 </body>
 </html>
