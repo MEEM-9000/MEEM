@@ -1,880 +1,918 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
+@import url(‘https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap’);
+
+/* ==================================================
+VARIABLES
+================================================== */
 
 :root {
-  --paper: #f1eee7;
-  --ink: #25231f;
-  --muted: #706b62;
-  --line: #d5cec1;
-  --earth: #8a6251;
-  --dark: #25231f;
-  --max: 1160px;
+–paper: #f1eee7;
+–ink: #25231f;
+–muted: #706b62;
+–line: #d5cec1;
+–earth: #8a6251;
+–dark: #25231f;
+–max: 1160px;
 }
 
-/* --------------------------------------------------
-   BASE
--------------------------------------------------- */
+/* ==================================================
+BASE
+================================================== */
 
-* {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 30px;
+scroll-behavior: smooth;
+scroll-padding-top: 30px;
 }
 
 body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: "DM Sans", Arial, sans-serif;
-  line-height: 1.65;
-  overflow-x: hidden;
+margin: 0;
+background: var(–paper);
+color: var(–ink);
+font-family: “DM Sans”, Arial, sans-serif;
+line-height: 1.65;
+overflow-x: hidden;
 }
 
 img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+display: block;
+max-width: 100%;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+color: inherit;
+text-decoration: none;
 }
 
 h1,
 h2,
 h3,
 p {
-  overflow-wrap: break-word;
+overflow-wrap: break-word;
 }
 
-/* Prevent anchor targets from hiding beneath the header */
-#MEEM,
+h1,
+h2,
+h3 {
+text-wrap: balance;
+}
+
+/* Anchor positioning */
+
+#MEME,
 #listen,
 #Shows,
 #contact {
-  scroll-margin-top: 30px;
+scroll-margin-top: 30px;
 }
 
-
-/* --------------------------------------------------
-   HEADER
--------------------------------------------------- */
+/* ==================================================
+HEADER
+================================================== */
 
 .site-header {
-  position: absolute;
-  z-index: 5;
-  left: 0;
-  right: 0;
-  top: 0;
+position: absolute;
+z-index: 5;
+top: 0;
+left: 0;
+right: 0;
 
-  width: 100%;
-  max-width: var(--max);
-  margin: auto;
+width: 100%;
+max-width: var(–max);
+margin: auto;
+padding: 28px;
 
-  padding: 28px 28px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 30px;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-
-  color: white;
+color: white;
 }
 
 .logo {
-  flex: 0 0 auto;
+flex: 0 0 auto;
 
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: .22em;
+font-size: 1.25rem;
+font-weight: 700;
+letter-spacing: .22em;
 }
 
 nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+flex-wrap: wrap;
 
-  gap: 26px;
+gap: 26px;
 
-  font-size: .75rem;
-  text-transform: uppercase;
-  letter-spacing: .12em;
+font-size: .75rem;
+text-transform: uppercase;
+letter-spacing: .12em;
 }
 
 nav a {
-  white-space: nowrap;
+white-space: nowrap;
+transition: opacity .2s ease;
 }
 
 nav a:hover {
-  opacity: .65;
+opacity: .65;
 }
 
-
-/* --------------------------------------------------
-   HERO
--------------------------------------------------- */
+/* ==================================================
+HERO
+================================================== */
 
 .hero {
-  min-height: 92vh;
+position: relative;
 
-  position: relative;
+min-height: 92vh;
 
-  display: flex;
-  align-items: flex-end;
+display: flex;
+align-items: flex-end;
 
-  overflow: hidden;
+overflow: hidden;
 
-  background: #333;
+background: #333;
 }
 
 .hero-image {
-  position: absolute;
-  inset: 0;
+position: absolute;
+inset: 0;
 
-  width: 100%;
-  height: 100%;
+width: 100%;
+height: 100%;
 
-  object-fit: cover;
+object-fit: cover;
+object-position: center;
 }
 
 .hero-overlay {
-  position: absolute;
-  inset: 0;
+position: absolute;
+inset: 0;
 
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0, 0, 0, .35) 0%,
-      rgba(0, 0, 0, .06) 45%,
-      rgba(0, 0, 0, .68) 100%
-    );
+background:
+linear-gradient(
+180deg,
+rgba(0, 0, 0, .35) 0%,
+rgba(0, 0, 0, .06) 45%,
+rgba(0, 0, 0, .68) 100%
+);
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
+position: relative;
+z-index: 2;
 
-  width: min(var(--max), 100%);
-  margin: auto;
+width: min(var(–max), 100%);
+margin: auto;
+padding: 150px 28px 90px;
 
-  padding: 150px 28px 90px;
-
-  color: white;
+color: white;
 }
 
 .eyebrow {
-  margin: 0 0 12px;
+margin: 0 0 12px;
 
-  font-size: .68rem;
-  font-weight: 700;
-
-  letter-spacing: .25em;
-  text-transform: uppercase;
+font-size: .68rem;
+font-weight: 700;
+letter-spacing: .25em;
+text-transform: uppercase;
 }
 
 .hero h1 {
-  margin: 0;
+max-width: 100%;
+margin: 0;
 
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(5rem, 15vw, 11rem);
-  font-weight: 400;
-
-  line-height: .83;
-  letter-spacing: -.035em;
-
-  max-width: 100%;
+font-family: “Playfair Display”, Georgia, serif;
+font-size: clamp(5rem, 15vw, 11rem);
+font-weight: 400;
+line-height: .83;
+letter-spacing: -.035em;
 }
 
 .tagline {
-  max-width: 800px;
+max-width: 800px;
+margin: 25px 0 30px;
 
-  margin: 25px 0 30px;
-
-  font-family: "Playfair Display", Georgia, serif;
-  font-style: italic;
-
-  font-size: clamp(1.35rem, 3vw, 2.1rem);
-  line-height: 1.3;
+font-family: “Playfair Display”, Georgia, serif;
+font-style: italic;
+font-size: clamp(1.35rem, 3vw, 2.1rem);
+line-height: 1.3;
 }
 
 .button {
-  display: inline-block;
+display: inline-block;
 
-  border: 1px solid rgba(255, 255, 255, .85);
+border: 1px solid rgba(255, 255, 255, .85);
+padding: 11px 25px;
 
-  padding: 11px 25px;
+text-transform: uppercase;
+letter-spacing: .14em;
+font-size: .7rem;
 
-  text-transform: uppercase;
-  letter-spacing: .14em;
-
-  font-size: .7rem;
+transition:
+background .2s ease,
+color .2s ease;
 }
 
 .button:hover {
-  background: white;
-  color: var(--ink);
+background: white;
+color: var(–ink);
 }
 
 .photo-credit {
-  position: absolute;
-  z-index: 3;
+position: absolute;
+z-index: 3;
 
-  right: 20px;
-  bottom: 12px;
+right: 20px;
+bottom: 12px;
 
-  margin: 0;
+margin: 0;
 
-  color: rgba(255, 255, 255, .85);
-
-  font-size: .62rem;
+color: rgba(255, 255, 255, .85);
+font-size: .62rem;
 }
 
-
-/* --------------------------------------------------
-   GENERAL SECTIONS
--------------------------------------------------- */
+/* ==================================================
+GENERAL SECTIONS
+================================================== */
 
 .section {
-  width: min(var(--max), 100%);
-  margin: auto;
-
-  padding: 110px 28px;
+width: min(var(–max), 100%);
+margin: auto;
+padding: 110px 28px;
 }
 
 .music,
-.live,
+.Shows,
 .contact {
-  border-top: 1px solid var(--line);
+border-top: 1px solid var(–line);
 }
 
 .section-title {
-  margin-bottom: 55px;
+margin-bottom: 55px;
 }
 
 .section-title h2 {
-  margin-bottom: 0;
+margin-bottom: 0;
 }
 
-
-/* --------------------------------------------------
-   INTRO
--------------------------------------------------- */
+/* ==================================================
+INTRO
+================================================== */
 
 .intro {
-  display: grid;
+display: grid;
 
-  grid-template-columns: 170px minmax(0, 1fr);
+grid-template-columns: 170px minmax(0, 1fr);
+gap: 60px;
 
-  gap: 60px;
-
-  align-items: start;
+align-items: start;
 }
 
 .intro-mark {
-  font-family: "Playfair Display", Georgia, serif;
+font-family: “Playfair Display”, Georgia, serif;
+font-size: 11rem;
+line-height: .7;
 
-  font-size: 11rem;
-  line-height: .7;
+color: var(–earth);
+opacity: .75;
 
-  color: var(--earth);
-  opacity: .75;
-
-  overflow-wrap: normal;
+overflow-wrap: normal;
 }
 
 h2 {
-  margin: 0 0 28px;
+margin: 0 0 28px;
 
-  font-family: "Playfair Display", Georgia, serif;
-
-  font-size: clamp(2.7rem, 6vw, 5rem);
-
-  line-height: 1.05;
-  font-weight: 400;
+font-family: “Playfair Display”, Georgia, serif;
+font-size: clamp(2.7rem, 6vw, 5rem);
+font-weight: 400;
+line-height: 1.05;
 }
 
 .lead {
-  max-width: 780px;
+max-width: 780px;
+margin: 0 0 20px;
 
-  margin: 0 0 20px;
-
-  font-family: "Playfair Display", Georgia, serif;
-
-  font-size: clamp(1.5rem, 3vw, 2.35rem);
-
-  line-height: 1.35;
+font-family: “Playfair Display”, Georgia, serif;
+font-size: clamp(1.5rem, 3vw, 2.35rem);
+line-height: 1.35;
 }
 
 .intro p:not(.eyebrow) {
-  max-width: 700px;
-  color: var(--muted);
+max-width: 700px;
+color: var(–muted);
 }
 
-
-/* --------------------------------------------------
-   MUSIC / LISTEN
--------------------------------------------------- */
+/* ==================================================
+MUSIC / LISTEN
+================================================== */
 
 .player-card {
-  display: grid;
+display: grid;
 
-  /*
-     minmax(0, 1fr) prevents the middle column
-     from forcing the entire row wider than the screen.
-  */
-  grid-template-columns:
-    70px
-    minmax(0, 1fr)
-    minmax(260px, 1.2fr);
+grid-template-columns:
+70px
+minmax(0, 1fr)
+minmax(260px, 1.2fr);
 
-  gap: 25px;
+gap: 25px;
 
-  align-items: center;
+align-items: center;
 
-  padding: 28px 0;
+padding: 28px 0;
 
-  border-top: 1px solid var(--line);
+border-top: 1px solid var(–line);
 }
 
 .player-card:last-child {
-  border-bottom: 1px solid var(--line);
+border-bottom: 1px solid var(–line);
 }
 
 .track-number {
-  font-family: "Playfair Display", Georgia, serif;
-
-  font-size: 2rem;
-  line-height: 1;
-
-  color: var(--earth);
+font-family: “Playfair Display”, Georgia, serif;
+font-size: 2rem;
+line-height: 1;
+color: var(–earth);
 }
 
 .track-info {
-  min-width: 0;
+min-width: 0;
 }
 
 .track-info h3 {
-  margin: 0;
+margin: 0;
 
-  font-family: "Playfair Display", Georgia, serif;
-
-  font-size: 1.5rem;
-  font-weight: 400;
-
-  line-height: 1.2;
+font-family: “Playfair Display”, Georgia, serif;
+font-size: 1.5rem;
+font-weight: 400;
+line-height: 1.2;
 }
 
 .track-info p {
-  margin: 4px 0 0;
-
-  color: var(--muted);
-
-  font-size: .9rem;
-  line-height: 1.4;
+margin: 4px 0 0;
+color: var(–muted);
+font-size: .9rem;
+line-height: 1.4;
 }
 
 audio {
-  display: block;
-  width: 100%;
-  max-width: 100%;
+display: block;
+width: 100%;
+max-width: 100%;
 }
 
-.placeholder-note {
-  color: var(--muted);
-  font-size: .75rem;
+/* ==================================================
+SHOWS
+================================================== */
+
+.Shows-copy {
+max-width: 650px;
+margin-bottom: 45px;
+
+font-family: “Playfair Display”, Georgia, serif;
+font-size: 1.5rem;
+line-height: 1.45;
 }
 
-
-/* --------------------------------------------------
-   LIVE
--------------------------------------------------- */
-
-.live-copy {
-  max-width: 650px;
-
-  margin-bottom: 45px;
-
-  font-family: "Playfair Display", Georgia, serif;
-
-  font-size: 1.5rem;
-  line-height: 1.45;
-}
-
-.live-copy p {
-  margin: 0;
+.Shows-copy p {
+margin: 0;
 }
 
 .event {
-  display: grid;
+display: grid;
 
-  grid-template-columns:
-    130px
-    minmax(0, 1fr)
-    auto;
+grid-template-columns:
+130px
+minmax(0, 1fr)
+auto;
 
-  gap: 30px;
+gap: 30px;
 
-  align-items: center;
+align-items: center;
 
-  padding: 28px 0;
+padding: 28px 0;
 
-  border-top: 1px solid var(--line);
+border-top: 1px solid var(–line);
 }
 
-.event > div:nth-child(2) {
-  min-width: 0;
+.event-details {
+min-width: 0;
 }
 
 .event-date strong {
-  display: block;
+display: block;
 
-  font-family: "Playfair Display", Georgia, serif;
-
-  font-size: 2.5rem;
-  line-height: 1;
+font-family: “Playfair Display”, Georgia, serif;
+font-size: 2.5rem;
+line-height: 1;
 }
 
 .event-date span {
-  font-size: .65rem;
-  letter-spacing: .12em;
+font-size: .65rem;
+letter-spacing: .12em;
 }
 
 .event h3 {
-  margin: 0;
+margin: 0;
 
-  font-family: "Playfair Display", Georgia, serif;
-
-  font-size: 1.5rem;
-  font-weight: 400;
-
-  line-height: 1.25;
+font-family: “Playfair Display”, Georgia, serif;
+font-size: 1.5rem;
+font-weight: 400;
+line-height: 1.25;
 }
 
 .event p {
-  margin: 4px 0 0;
+margin: 4px 0 0;
 
-  color: var(--muted);
-
-  font-size: .9rem;
+color: var(–muted);
+font-size: .9rem;
 }
 
 .event-link {
-  white-space: nowrap;
+white-space: nowrap;
 
-  font-size: .7rem;
-
-  text-transform: uppercase;
-  letter-spacing: .15em;
+font-size: .7rem;
+text-transform: uppercase;
+letter-spacing: .15em;
 }
 
+/* ==================================================
+PHOTOGRAPHY
+================================================== */
 
-/* --------------------------------------------------
-   PHOTO BREAK
--------------------------------------------------- */
+/*
+FIRST PHOTO
+This image is intentionally cropped to create
+the large cinematic photographic break.
+*/
 
 .photo-break {
-  position: relative;
-  overflow: hidden;
+position: relative;
 }
 
-.photo-break img {
-  width: 100%;
+.photo-break-cover {
+overflow: hidden;
+}
 
-  height: min(70vh, 760px);
+.photo-break-cover img {
+display: block;
 
-  object-fit: cover;
-  object-position: center;
+width: 100%;
+height: min(70vh, 760px);
 
-  filter: saturate(.85);
+object-fit: cover;
+object-position: center;
+
+filter: saturate(.85);
+}
+
+/*
+FINAL COMPILATION-4 PHOTO
+
+IMPORTANT:
+No fixed height.
+No object-fit: cover.
+The browser calculates the height from
+the photograph’s natural aspect ratio.
+
+This means the entire photograph remains
+visible on laptop, tablet and mobile.
+*/
+
+.final-photo {
+overflow: visible;
+}
+
+.final-photo img {
+display: block;
+
+width: 100%;
+height: auto;
+max-width: 100%;
+
+object-fit: contain;
+object-position: center;
+
+filter: saturate(.85);
 }
 
 .photo-caption {
-  position: absolute;
+position: absolute;
 
-  left: 28px;
-  right: 28px;
-  bottom: 25px;
+left: 28px;
+right: 28px;
+bottom: 25px;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
 
-  gap: 20px;
+gap: 20px;
 
-  color: white;
+color: white;
 
-  font-size: .7rem;
+font-size: .7rem;
+text-transform: uppercase;
+letter-spacing: .18em;
 
-  text-transform: uppercase;
-  letter-spacing: .18em;
+text-shadow: 0 1px 8px rgba(0, 0, 0, .5);
 
-  text-shadow: 0 1px 8px rgba(0, 0, 0, .5);
+pointer-events: none;
 }
 
 .photo-caption span {
-  overflow-wrap: break-word;
+overflow-wrap: break-word;
 }
 
+/*
+The final image is not fixed-height, so the
+caption must remain attached to its bottom.
+*/
 
-/* --------------------------------------------------
-   CONTACT
--------------------------------------------------- */
+.final-photo .photo-caption {
+bottom: 25px;
+}
+
+/* ==================================================
+CONTACT
+================================================== */
 
 .contact {
-  text-align: center;
+text-align: center;
 }
 
 .contact h2 {
-  margin-bottom: 35px;
+margin-bottom: 35px;
 }
 
 .email {
-  display: inline-block;
+display: inline-block;
 
-  max-width: 100%;
+max-width: 100%;
 
-  font-family: "Playfair Display", Georgia, serif;
+font-family: “Playfair Display”, Georgia, serif;
+font-size: clamp(1.5rem, 4vw, 2.8rem);
+line-height: 1.25;
 
-  font-size: clamp(1.5rem, 4vw, 2.8rem);
+border-bottom: 1px solid var(–ink);
 
-  line-height: 1.25;
-
-  border-bottom: 1px solid var(--ink);
-
-  overflow-wrap: anywhere;
+overflow-wrap: anywhere;
 }
 
 .socials {
-  margin-top: 50px;
+margin-top: 50px;
 
-  display: flex;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
 
-  justify-content: center;
-  align-items: center;
+gap: 30px;
 
-  flex-wrap: wrap;
+font-size: .7rem;
+text-transform: uppercase;
+letter-spacing: .14em;
+}
 
-  gap: 30px;
-
-  font-size: .7rem;
-
-  text-transform: uppercase;
-  letter-spacing: .14em;
+.socials a {
+transition: color .2s ease;
 }
 
 .socials a:hover {
-  color: var(--earth);
+color: var(–earth);
 }
 
-
-/* --------------------------------------------------
-   FOOTER
--------------------------------------------------- */
+/* ==================================================
+FOOTER
+================================================== */
 
 footer {
-  border-top: 1px solid var(--line);
+border-top: 1px solid var(–line);
 
-  padding: 25px 28px;
+padding: 25px 28px;
 
-  display: flex;
+display: flex;
+justify-content: space-between;
+align-items: center;
 
-  justify-content: space-between;
-  align-items: center;
+gap: 20px;
 
-  gap: 20px;
-
-  color: var(--muted);
-
-  font-size: .65rem;
+color: var(–muted);
+font-size: .65rem;
 }
 
-
-/* --------------------------------------------------
-   TABLET
--------------------------------------------------- */
+/* ==================================================
+TABLET
+================================================== */
 
 @media (max-width: 900px) {
 
-  .site-header {
-    padding: 24px 24px;
-  }
-
-  nav {
-    gap: 18px;
-  }
-
-  .hero-content {
-    padding: 145px 24px 80px;
-  }
-
-  .intro {
-    grid-template-columns: 120px minmax(0, 1fr);
-    gap: 40px;
-  }
-
-  .intro-mark {
-    font-size: 8rem;
-  }
-
-  .player-card {
-    grid-template-columns:
-      60px
-      minmax(0, 1fr)
-      minmax(220px, 1fr);
-
-    gap: 20px;
-  }
-
-  .event {
-    grid-template-columns:
-      100px
-      minmax(0, 1fr)
-      auto;
-
-    gap: 22px;
-  }
+.site-header {
+padding: 24px;
 }
 
+nav {
+gap: 18px;
+}
 
-/* --------------------------------------------------
-   MOBILE
--------------------------------------------------- */
+.hero-content {
+padding: 145px 24px 80px;
+}
+
+.intro {
+grid-template-columns: 120px minmax(0, 1fr);
+gap: 40px;
+}
+
+.intro-mark {
+font-size: 8rem;
+}
+
+.player-card {
+grid-template-columns:
+60px
+minmax(0, 1fr)
+minmax(220px, 1fr);
+
+gap: 20px;
+
+}
+
+.event {
+grid-template-columns:
+100px
+minmax(0, 1fr)
+auto;
+
+gap: 22px;
+
+}
+
+}
+
+/* ==================================================
+MOBILE
+================================================== */
 
 @media (max-width: 700px) {
 
-  .site-header {
-    padding: 20px;
+.site-header {
+padding: 20px;
 
-    align-items: flex-start;
+align-items: flex-start;
+gap: 20px;
 
-    gap: 20px;
-  }
-
-  .logo {
-    font-size: 1.05rem;
-  }
-
-  nav {
-    gap: 10px 14px;
-
-    font-size: .62rem;
-    letter-spacing: .09em;
-  }
-
-
-  /* HERO */
-
-  .hero {
-    min-height: 88vh;
-  }
-
-  .hero-content {
-    padding: 125px 20px 65px;
-  }
-
-  .hero h1 {
-    font-size: clamp(4.5rem, 22vw, 7rem);
-  }
-
-  .tagline {
-    max-width: 600px;
-
-    margin: 22px 0 28px;
-
-    font-size: clamp(1.25rem, 5.5vw, 1.65rem);
-    line-height: 1.3;
-  }
-
-  .photo-credit {
-    right: 15px;
-    bottom: 10px;
-
-    font-size: .55rem;
-  }
-
-
-  /* SECTIONS */
-
-  .section {
-    padding: 75px 20px;
-  }
-
-  .section-title {
-    margin-bottom: 40px;
-  }
-
-  h2 {
-    font-size: clamp(2.4rem, 11vw, 4rem);
-  }
-
-
-  /* INTRO */
-
-  .intro {
-    grid-template-columns: 1fr;
-
-    gap: 25px;
-  }
-
-  .intro-mark {
-    font-size: 6rem;
-    line-height: .8;
-  }
-
-  .lead {
-    font-size: clamp(1.4rem, 6vw, 1.8rem);
-  }
-
-
-  /* MUSIC */
-
-  .player-card {
-    grid-template-columns: 45px minmax(0, 1fr);
-
-    gap: 15px 18px;
-
-    padding: 24px 0;
-  }
-
-  .player-card audio {
-    grid-column: 1 / -1;
-  }
-
-  .track-number {
-    font-size: 1.7rem;
-  }
-
-  .track-info h3 {
-    font-size: 1.35rem;
-  }
-
-  .track-info p {
-    font-size: .82rem;
-  }
-
-
-  /* LIVE */
-
-  .live-copy {
-    font-size: 1.3rem;
-  }
-
-  .event {
-    grid-template-columns: 70px minmax(0, 1fr);
-
-    gap: 18px;
-
-    align-items: start;
-  }
-
-  .event-date strong {
-    font-size: 2.1rem;
-  }
-
-  .event h3 {
-    font-size: 1.3rem;
-  }
-
-  .event p {
-    font-size: .82rem;
-  }
-
-  .event-link {
-    grid-column: 2;
-
-    margin-top: 4px;
-  }
-
-
-  /* PHOTO */
-
-  .photo-break img {
-    height: 55vh;
-  }
-
-  .photo-caption {
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-
-    gap: 15px;
-
-    font-size: .58rem;
-    letter-spacing: .13em;
-  }
-
-
-  /* CONTACT */
-
-  .contact h2 {
-    margin-bottom: 30px;
-  }
-
-  .email {
-    font-size: clamp(1.25rem, 6vw, 1.8rem);
-  }
-
-  .socials {
-    margin-top: 40px;
-
-    gap: 18px 25px;
-
-    font-size: .62rem;
-  }
-
-
-  /* FOOTER */
-
-  footer {
-    padding: 22px 20px;
-
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 8px;
-  }
 }
 
+.logo {
+font-size: 1.05rem;
+}
 
-/* --------------------------------------------------
-   VERY SMALL PHONES
--------------------------------------------------- */
+nav {
+gap: 10px 14px;
+
+font-size: .62rem;
+letter-spacing: .09em;
+
+}
+
+/* HERO */
+
+.hero {
+min-height: 88vh;
+}
+
+.hero-content {
+padding: 125px 20px 65px;
+}
+
+.hero h1 {
+font-size: clamp(4.5rem, 22vw, 7rem);
+}
+
+.tagline {
+max-width: 600px;
+
+margin: 22px 0 28px;
+font-size: clamp(1.25rem, 5.5vw, 1.65rem);
+line-height: 1.3;
+
+}
+
+.photo-credit {
+right: 15px;
+bottom: 10px;
+
+font-size: .55rem;
+
+}
+
+/* SECTIONS */
+
+.section {
+padding: 75px 20px;
+}
+
+.section-title {
+margin-bottom: 40px;
+}
+
+h2 {
+font-size: clamp(2.4rem, 11vw, 4rem);
+}
+
+/* INTRO */
+
+.intro {
+grid-template-columns: 1fr;
+gap: 25px;
+}
+
+.intro-mark {
+font-size: 6rem;
+line-height: .8;
+}
+
+.lead {
+font-size: clamp(1.4rem, 6vw, 1.8rem);
+}
+
+/* MUSIC */
+
+.player-card {
+grid-template-columns: 45px minmax(0, 1fr);
+
+gap: 15px 18px;
+padding: 24px 0;
+
+}
+
+.player-card audio {
+grid-column: 1 / -1;
+}
+
+.track-number {
+font-size: 1.7rem;
+}
+
+.track-info h3 {
+font-size: 1.35rem;
+}
+
+.track-info p {
+font-size: .82rem;
+}
+
+/* SHOWS */
+
+.Shows-copy {
+font-size: 1.3rem;
+}
+
+.event {
+grid-template-columns:
+70px
+minmax(0, 1fr);
+
+gap: 18px;
+align-items: start;
+
+}
+
+.event-date strong {
+font-size: 2.1rem;
+}
+
+.event h3 {
+font-size: 1.3rem;
+}
+
+.event p {
+font-size: .82rem;
+}
+
+.event-link {
+grid-column: 2;
+margin-top: 4px;
+}
+
+/*
+FIRST PHOTO ONLY
+
+ The first photographic break keeps its
+ intentional cinematic crop.
+
+*/
+
+.photo-break-cover img {
+height: 55vh;
+min-height: 300px;
+}
+
+/*
+FINAL PHOTO
+
+ Compilation-4 deliberately has NO fixed
+ height on mobile.
+
+*/
+
+.final-photo img {
+width: 100%;
+height: auto;
+max-width: 100%;
+}
+
+.photo-caption {
+left: 20px;
+right: 20px;
+bottom: 20px;
+
+gap: 15px;
+font-size: .58rem;
+letter-spacing: .13em;
+
+}
+
+.final-photo .photo-caption {
+bottom: 20px;
+}
+
+/* CONTACT */
+
+.contact h2 {
+margin-bottom: 30px;
+}
+
+.email {
+font-size: clamp(1.25rem, 6vw, 1.8rem);
+}
+
+.socials {
+margin-top: 40px;
+
+gap: 18px 25px;
+font-size: .62rem;
+
+}
+
+/* FOOTER */
+
+footer {
+padding: 22px 20px;
+
+flex-direction: column;
+align-items: flex-start;
+gap: 8px;
+
+}
+
+}
+
+/* ==================================================
+VERY SMALL PHONES
+================================================== */
 
 @media (max-width: 420px) {
 
-  .site-header {
-    flex-direction: column;
-    align-items: flex-start;
+.site-header {
+flex-direction: column;
+align-items: flex-start;
 
-    gap: 12px;
-  }
+gap: 12px;
 
-  nav {
-    justify-content: flex-start;
-    gap: 8px 13px;
-  }
+}
 
-  .hero-content {
-    padding-top: 155px;
-  }
+nav {
+justify-content: flex-start;
+gap: 8px 13px;
+}
 
-  .hero h1 {
-    font-size: 4.5rem;
-  }
+.hero-content {
+padding-top: 155px;
+}
 
-  .intro-mark {
-    font-size: 5rem;
-  }
+.hero h1 {
+font-size: 4.5rem;
+}
 
-  .photo-caption {
-    flex-direction: column;
-    align-items: flex-start;
+.intro-mark {
+font-size: 5rem;
+}
 
-    gap: 5px;
-  }
+.photo-caption {
+flex-direction: column;
+align-items: flex-start;
+
+gap: 5px;
+
+}
+
 }
