@@ -1384,3 +1384,167 @@ footer {
     gap: 5px;
   }
 }
+=================
+/* ==================================================
+   FINAL MOBILE SOCIAL BUTTON FIX
+   ================================================== */
+
+@media (max-width: 700px) {
+
+  /*
+     Keep the social media links as simple,
+     compact clickable boxes.
+
+     Any logos/icons/images inside the links
+     are completely removed on mobile.
+  */
+
+  .socials {
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 28px;
+  }
+
+  .socials a {
+    display: inline-flex !important;
+
+    width: auto !important;
+    min-width: 110px !important;
+    max-width: 135px !important;
+
+    height: 38px !important;
+
+    padding: 0 12px !important;
+    margin: 0 !important;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--line);
+
+    background: transparent;
+
+    color: var(--ink);
+
+    font-family: "DM Sans", Arial, sans-serif;
+
+    font-size: .68rem !important;
+    font-weight: 500;
+
+    line-height: 1 !important;
+
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+
+    overflow: hidden;
+
+    box-shadow: none;
+
+    transform: none !important;
+  }
+
+
+  /*
+     Remove every likely form of social-media
+     logo/icon from the mobile buttons.
+  */
+
+  .socials a img,
+  .socials a svg,
+  .socials a picture,
+  .socials a i,
+  .socials a span[class],
+  .socials a span[aria-hidden="true"],
+  .socials a .icon,
+  .socials a .logo,
+  .socials a .social-icon,
+  .socials a .social-logo {
+    display: none !important;
+
+    width: 0 !important;
+    height: 0 !important;
+
+    max-width: 0 !important;
+    max-height: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+
+  /*
+     Prevent background-image logos from
+     appearing on the links themselves.
+  */
+
+  .socials a {
+    background-image: none !important;
+  }
+
+
+  /*
+     Ensure pseudo-element logos are also removed.
+  */
+
+  .socials a::before,
+  .socials a::after {
+    content: none !important;
+
+    display: none !important;
+
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+
+  /*
+     Make sure text remains visible and centred.
+  */
+
+  .socials a {
+    white-space: nowrap;
+  }
+
+  .socials a:hover {
+    background: var(--ink);
+    color: white;
+
+    border-color: var(--ink);
+
+    transform: none !important;
+  }
+}
+
+
+/* ==================================================
+   VERY SMALL PHONES
+   ================================================== */
+
+@media (max-width: 420px) {
+
+  .socials {
+    gap: 7px;
+    margin-top: 25px;
+  }
+
+  .socials a {
+    min-width: 100px !important;
+    max-width: 120px !important;
+
+    height: 36px !important;
+
+    padding: 0 9px !important;
+
+    font-size: .63rem !important;
+    letter-spacing: .05em;
+  }
+}
