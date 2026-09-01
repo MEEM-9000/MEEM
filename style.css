@@ -1,974 +1,282 @@
-@import url(‘https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap’);
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap");
 
 /* ==================================================
-VARIABLES
-================================================== */
+   MEEM — Elke & Mark
+   Complete responsive stylesheet
+   ================================================== */
+
+
+/* ==================================================
+   VARIABLES
+   ================================================== */
 
 :root {
-–paper: #f1eee7;
-–ink: #25231f;
-–muted: #706b62;
-–line: #d5cec1;
-–earth: #8a6251;
-–dark: #25231f;
-–max: 1160px;
+  --paper: #f1eee7;
+  --ink: #25231f;
+  --muted: #706b62;
+  --line: #d5cec1;
+  --earth: #8a6251;
+  --dark: #25231f;
+  --max: 1160px;
 }
 
+
 /* ==================================================
-BASE
-================================================== */
+   BASE
+   ================================================== */
 
 *,
 *::before,
 *::after {
-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-scroll-behavior: smooth;
-scroll-padding-top: 30px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 body {
-margin: 0;
-background: var(–paper);
-color: var(–ink);
-font-family: “DM Sans”, Arial, sans-serif;
-line-height: 1.65;
-overflow-x: hidden;
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
 }
 
 img {
-display: block;
-max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 a {
-color: inherit;
-text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 h1,
 h2,
 h3,
 p {
-overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 h1,
 h2,
 h3 {
-text-wrap: balance;
+  text-wrap: balance;
 }
 
-/* Anchor positioning */
+p {
+  margin-top: 0;
+}
+
+audio {
+  max-width: 100%;
+}
+
+
+/* ==================================================
+   ANCHOR POSITIONING
+   ================================================== */
 
 #MEME,
 #listen,
 #Shows,
 #contact {
-scroll-margin-top: 30px;
+  scroll-margin-top: 90px;
 }
+
 
 /* ==================================================
-HEADER
-================================================== */
-
-.site-header {
-position: absolute;
-z-index: 5;
-top: 0;
-left: 0;
-right: 0;
-
-width: 100%;
-max-width: var(–max);
-margin: auto;
-padding: 28px;
-
-display: flex;
-align-items: center;
-justify-content: space-between;
-gap: 30px;
-
-color: white;
-}
-
-.logo {
-flex: 0 0 auto;
-
-font-size: 1.25rem;
-font-weight: 700;
-letter-spacing: .22em;
-}
-
-nav {
-display: flex;
-align-items: center;
-justify-content: flex-end;
-flex-wrap: wrap;
-
-gap: 26px;
-
-font-size: .75rem;
-text-transform: uppercase;
-letter-spacing: .12em;
-}
-
-nav a {
-white-space: nowrap;
-transition: opacity .2s ease;
-}
-
-nav a:hover {
-opacity: .65;
-}
-
-/* ==================================================
-HERO
-================================================== */
-
-.hero {
-position: relative;
-
-min-height: 92vh;
-
-display: flex;
-align-items: flex-end;
-
-overflow: hidden;
-
-background: #333;
-}
-
-.hero-image {
-position: absolute;
-inset: 0;
-
-width: 100%;
-height: 100%;
-
-object-fit: cover;
-object-position: center;
-}
-
-.hero-overlay {
-position: absolute;
-inset: 0;
-
-background:
-linear-gradient(
-180deg,
-rgba(0, 0, 0, .35) 0%,
-rgba(0, 0, 0, .06) 45%,
-rgba(0, 0, 0, .68) 100%
-);
-}
-
-.hero-content {
-position: relative;
-z-index: 2;
-
-width: min(var(–max), 100%);
-margin: auto;
-padding: 150px 28px 90px;
-
-color: white;
-}
-
-.eyebrow {
-margin: 0 0 12px;
-
-font-size: .68rem;
-font-weight: 700;
-letter-spacing: .25em;
-text-transform: uppercase;
-}
-
-.hero h1 {
-max-width: 100%;
-margin: 0;
-
-font-family: “Playfair Display”, Georgia, serif;
-font-size: clamp(5rem, 15vw, 11rem);
-font-weight: 400;
-line-height: .83;
-letter-spacing: -.035em;
-}
-
-.tagline {
-max-width: 800px;
-margin: 25px 0 30px;
-
-font-family: “Playfair Display”, Georgia, serif;
-font-style: italic;
-font-size: clamp(1.35rem, 3vw, 2.1rem);
-line-height: 1.3;
-}
-
-.button {
-display: inline-block;
-
-border: 1px solid rgba(255, 255, 255, .85);
-padding: 11px 25px;
-
-text-transform: uppercase;
-letter-spacing: .14em;
-font-size: .7rem;
-
-transition:
-background .2s ease,
-color .2s ease;
-}
-
-.button:hover {
-background: white;
-color: var(–ink);
-}
-
-.photo-credit {
-position: absolute;
-z-index: 3;
-
-right: 20px;
-bottom: 12px;
-
-margin: 0;
-
-color: rgba(255, 255, 255, .85);
-font-size: .62rem;
-}
-
-/* ==================================================
-GENERAL SECTIONS
-================================================== */
-
-.section {
-width: min(var(–max), 100%);
-margin: auto;
-padding: 110px 28px;
-}
-
-.music,
-.Shows,
-.contact {
-border-top: 1px solid var(–line);
-}
-
-.section-title {
-margin-bottom: 55px;
-}
-
-.section-title h2 {
-margin-bottom: 0;
-}
-
-/* ==================================================
-INTRO
-================================================== */
-
-.intro {
-display: grid;
-
-grid-template-columns: 170px minmax(0, 1fr);
-gap: 60px;
-
-align-items: start;
-}
-
-.intro-mark {
-font-family: “Playfair Display”, Georgia, serif;
-font-size: 11rem;
-line-height: .7;
-
-color: var(–earth);
-opacity: .75;
-
-overflow-wrap: normal;
-}
-
-h2 {
-margin: 0 0 28px;
-
-font-family: “Playfair Display”, Georgia, serif;
-font-size: clamp(2.7rem, 6vw, 5rem);
-font-weight: 400;
-line-height: 1.05;
-}
-
-.lead {
-max-width: 780px;
-margin: 0 0 20px;
-
-font-family: “Playfair Display”, Georgia, serif;
-font-size: clamp(1.5rem, 3vw, 2.35rem);
-line-height: 1.35;
-}
-
-.intro p:not(.eyebrow) {
-max-width: 700px;
-color: var(–muted);
-}
-
-/* ==================================================
-MUSIC / LISTEN
-================================================== */
-
-.player-card {
-display: grid;
-
-grid-template-columns:
-70px
-minmax(0, 1fr)
-minmax(260px, 1.2fr);
-
-gap: 25px;
-
-align-items: center;
-
-padding: 28px 0;
-
-border-top: 1px solid var(–line);
-}
-
-.player-card:last-child {
-border-bottom: 1px solid var(–line);
-}
-
-.track-number {
-font-family: “Playfair Display”, Georgia, serif;
-font-size: 2rem;
-line-height: 1;
-color: var(–earth);
-}
-
-.track-info {
-min-width: 0;
-}
-
-.track-info h3 {
-margin: 0;
-
-font-family: “Playfair Display”, Georgia, serif;
-font-size: 1.5rem;
-font-weight: 400;
-line-height: 1.2;
-}
-
-.track-info p {
-margin: 4px 0 0;
-color: var(–muted);
-font-size: .9rem;
-line-height: 1.4;
-}
-
-audio {
-display: block;
-width: 100%;
-max-width: 100%;
-}
-
-/* ==================================================
-SHOWS
-================================================== */
-
-.Shows-copy {
-max-width: 650px;
-margin-bottom: 45px;
-
-font-family: “Playfair Display”, Georgia, serif;
-font-size: 1.5rem;
-line-height: 1.45;
-}
-
-.Shows-copy p {
-margin: 0;
-}
-
-.event {
-display: grid;
-
-grid-template-columns:
-130px
-minmax(0, 1fr)
-auto;
-
-gap: 30px;
-
-align-items: center;
-
-padding: 28px 0;
-
-border-top: 1px solid var(–line);
-}
-
-.event-details {
-min-width: 0;
-}
-
-.event-date strong {
-display: block;
-
-font-family: “Playfair Display”, Georgia, serif;
-font-size: 2.5rem;
-line-height: 1;
-}
-
-.event-date span {
-font-size: .65rem;
-letter-spacing: .12em;
-}
-
-.event h3 {
-margin: 0;
-
-font-family: “Playfair Display”, Georgia, serif;
-font-size: 1.5rem;
-font-weight: 400;
-line-height: 1.25;
-}
-
-.event p {
-margin: 4px 0 0;
-
-color: var(–muted);
-font-size: .9rem;
-}
-
-.event-link {
-white-space: nowrap;
-
-font-size: .7rem;
-text-transform: uppercase;
-letter-spacing: .15em;
-}
-
-/* ==================================================
-PHOTOGRAPHY
-================================================== */
-
-/*
-FIRST PHOTO
-This image is intentionally cropped to create
-the large cinematic photographic break.
-*/
-
-.photo-break {
-position: relative;
-}
-
-.photo-break-cover {
-overflow: hidden;
-}
-
-.photo-break-cover img {
-display: block;
-
-width: 100%;
-height: min(70vh, 760px);
-
-object-fit: cover;
-object-position: center;
-
-filter: saturate(.85);
-}
-
-/*
-FINAL COMPILATION-4 PHOTO
-
-IMPORTANT:
-No fixed height.
-No object-fit: cover.
-The browser calculates the height from
-the photograph’s natural aspect ratio.
-
-This means the entire photograph remains
-visible on laptop, tablet and mobile.
-*/
-
-.final-photo {
-overflow: visible;
-}
-
-.final-photo img {
-display: block;
-
-width: 100%;
-height: auto;
-max-width: 100%;
-
-object-fit: contain;
-object-position: center;
-
-filter: saturate(.85);
-}
-
-.photo-caption {
-position: absolute;
-
-left: 28px;
-right: 28px;
-bottom: 25px;
-
-display: flex;
-justify-content: space-between;
-align-items: flex-end;
-
-gap: 20px;
-
-color: white;
-
-font-size: .7rem;
-text-transform: uppercase;
-letter-spacing: .18em;
-
-text-shadow: 0 1px 8px rgba(0, 0, 0, .5);
-
-pointer-events: none;
-}
-
-.photo-caption span {
-overflow-wrap: break-word;
-}
-
-/*
-The final image is not fixed-height, so the
-caption must remain attached to its bottom.
-*/
-
-.final-photo .photo-caption {
-bottom: 25px;
-}
-
-/* ==================================================
-CONTACT
-================================================== */
-
-.contact {
-text-align: center;
-}
-
-.contact h2 {
-margin-bottom: 35px;
-}
-
-.email {
-display: inline-block;
-
-max-width: 100%;
-
-font-family: “Playfair Display”, Georgia, serif;
-font-size: clamp(1.5rem, 4vw, 2.8rem);
-line-height: 1.25;
-
-border-bottom: 1px solid var(–ink);
-
-overflow-wrap: anywhere;
-}
-
-.socials {
-margin-top: 50px;
-
-display: flex;
-justify-content: center;
-align-items: center;
-flex-wrap: wrap;
-
-gap: 30px;
-
-font-size: .7rem;
-text-transform: uppercase;
-letter-spacing: .14em;
-}
-
-.socials a {
-transition: color .2s ease;
-}
-
-.socials a:hover {
-color: var(–earth);
-}
-
-/* ==================================================
-FOOTER
-================================================== */
-
-footer {
-border-top: 1px solid var(–line);
-
-padding: 25px 28px;
-
-display: flex;
-justify-content: space-between;
-align-items: center;
-
-gap: 20px;
-
-color: var(–muted);
-font-size: .65rem;
-}
-
-/* ==================================================
-TABLET
-================================================== */
-
-@media (max-width: 900px) {
-
-.site-header {
-padding: 24px;
-}
-
-nav {
-gap: 18px;
-}
-
-.hero-content {
-padding: 145px 24px 80px;
-}
-
-.intro {
-grid-template-columns: 120px minmax(0, 1fr);
-gap: 40px;
-}
-
-.intro-mark {
-font-size: 8rem;
-}
-
-.player-card {
-grid-template-columns:
-60px
-minmax(0, 1fr)
-minmax(220px, 1fr);
-
-gap: 20px;
-
-}
-
-.event {
-grid-template-columns:
-100px
-minmax(0, 1fr)
-auto;
-
-gap: 22px;
-
-}
-
-}
-
-/* ==================================================
-MOBILE
-================================================== */
-
-@media (max-width: 700px) {
-
-.site-header {
-padding: 20px;
-
-align-items: flex-start;
-gap: 20px;
-
-}
-
-.logo {
-font-size: 1.05rem;
-}
-
-nav {
-gap: 10px 14px;
-
-font-size: .62rem;
-letter-spacing: .09em;
-
-}
-
-/* HERO */
-
-.hero {
-min-height: 88vh;
-}
-
-.hero-content {
-padding: 125px 20px 65px;
-}
-
-.hero h1 {
-font-size: clamp(4.5rem, 22vw, 7rem);
-}
-
-.tagline {
-max-width: 600px;
-
-margin: 22px 0 28px;
-font-size: clamp(1.25rem, 5.5vw, 1.65rem);
-line-height: 1.3;
-
-}
-
-.photo-credit {
-right: 15px;
-bottom: 10px;
-
-font-size: .55rem;
-
-}
-
-/* SECTIONS */
-
-.section {
-padding: 75px 20px;
-}
-
-.section-title {
-margin-bottom: 40px;
-}
-
-h2 {
-font-size: clamp(2.4rem, 11vw, 4rem);
-}
-
-/* INTRO */
-
-.intro {
-grid-template-columns: 1fr;
-gap: 25px;
-}
-
-.intro-mark {
-font-size: 6rem;
-line-height: .8;
-}
-
-.lead {
-font-size: clamp(1.4rem, 6vw, 1.8rem);
-}
-
-/* MUSIC */
-
-.player-card {
-grid-template-columns: 45px minmax(0, 1fr);
-
-gap: 15px 18px;
-padding: 24px 0;
-
-}
-
-.player-card audio {
-grid-column: 1 / -1;
-}
-
-.track-number {
-font-size: 1.7rem;
-}
-
-.track-info h3 {
-font-size: 1.35rem;
-}
-
-.track-info p {
-font-size: .82rem;
-}
-
-/* SHOWS */
-
-.Shows-copy {
-font-size: 1.3rem;
-}
-
-.event {
-grid-template-columns:
-70px
-minmax(0, 1fr);
-
-gap: 18px;
-align-items: start;
-
-}
-
-.event-date strong {
-font-size: 2.1rem;
-}
-
-.event h3 {
-font-size: 1.3rem;
-}
-
-.event p {
-font-size: .82rem;
-}
-
-.event-link {
-grid-column: 2;
-margin-top: 4px;
-}
-
-/*
-FIRST PHOTO ONLY
-
- The first photographic break keeps its
- intentional cinematic crop.
-
-*/
-
-.photo-break-cover img {
-height: 55vh;
-min-height: 300px;
-}
-
-/*
-FINAL PHOTO
-
- Compilation-4 deliberately has NO fixed
- height on mobile.
-
-*/
-
-.final-photo img {
-width: 100%;
-height: auto;
-max-width: 100%;
-}
-
-.photo-caption {
-left: 20px;
-right: 20px;
-bottom: 20px;
-
-gap: 15px;
-font-size: .58rem;
-letter-spacing: .13em;
-
-}
-
-.final-photo .photo-caption {
-bottom: 20px;
-}
-
-/* CONTACT */
-
-.contact h2 {
-margin-bottom: 30px;
-}
-
-.email {
-font-size: clamp(1.25rem, 6vw, 1.8rem);
-}
-
-.socials {
-margin-top: 40px;
-
-gap: 18px 25px;
-font-size: .62rem;
-
-}
-
-/* FOOTER */
-
-footer {
-padding: 22px 20px;
-
-flex-direction: column;
-align-items: flex-start;
-gap: 8px;
-
-}
-
-}
-
-/* ==================================================
-VERY SMALL PHONES
-================================================== */
-
-@media (max-width: 420px) {
-
-.site-header {
-flex-direction: column;
-align-items: flex-start;
-
-gap: 12px;
-
-}
-
-nav {
-justify-content: flex-start;
-gap: 8px 13px;
-}
-
-.hero-content {
-padding-top: 155px;
-}
-
-.hero h1 {
-font-size: 4.5rem;
-}
-
-.intro-mark {
-font-size: 5rem;
-}
-
-.photo-caption {
-flex-direction: column;
-align-items: flex-start;
-
-gap: 5px;
-
-}
-
-}
-==============================================
-
-/* ==================================================
-   MEEM TYPOGRAPHY & NAVIGATION REFINEMENT
-   September 2026
+   HEADER
    ================================================== */
 
-
-/* --------------------------------------------------
-   HEADER / MAIN NAVIGATION
-   Larger, more readable and better positioned
-   -------------------------------------------------- */
-
 .site-header {
-  padding: 38px 32px 28px;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+  max-width: var(--max);
+  margin: auto;
+
+  padding: 38px 32px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  color: white;
 }
 
 .logo {
-  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  flex: 0 0 auto;
+
+  font-size: clamp(1.55rem, 2.3vw, 2rem);
+  font-weight: 700;
   line-height: 1;
   letter-spacing: .18em;
 }
 
 nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+
   gap: clamp(22px, 3vw, 38px);
+
   font-size: clamp(.9rem, 1.25vw, 1.05rem);
   line-height: 1.2;
+  text-transform: uppercase;
   letter-spacing: .11em;
 }
 
 nav a {
   white-space: nowrap;
+  transition: opacity .2s ease;
+}
+
+nav a:hover {
+  opacity: .65;
 }
 
 
-/* --------------------------------------------------
+/* ==================================================
    HERO
-   Keep the main MEME title dominant
-   while giving the header more breathing room
-   -------------------------------------------------- */
+   ================================================== */
+
+.hero {
+  position: relative;
+
+  min-height: 92vh;
+
+  display: flex;
+  align-items: flex-end;
+
+  overflow: hidden;
+
+  background: #333;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, .35) 0%,
+      rgba(0, 0, 0, .06) 45%,
+      rgba(0, 0, 0, .68) 100%
+    );
+}
 
 .hero-content {
-  padding-top: 175px;
+  position: relative;
+  z-index: 2;
+
+  width: min(var(--max), 100%);
+  margin: auto;
+
+  padding: 175px 32px 90px;
+
+  color: white;
+}
+
+.hero .eyebrow {
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  max-width: 100%;
+  margin: 0;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(5rem, 15vw, 11rem);
+  font-weight: 400;
+  line-height: .83;
+  letter-spacing: -.035em;
+}
+
+.tagline {
+  max-width: 800px;
+  margin: 25px 0 30px;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1.35rem, 3vw, 2.1rem);
+  line-height: 1.3;
+}
+
+.button {
+  display: inline-block;
+
+  border: 1px solid rgba(255, 255, 255, .85);
+
+  padding: 11px 25px;
+
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: .72rem;
+
+  transition:
+    background .2s ease,
+    color .2s ease;
+}
+
+.button:hover {
+  background: white;
+  color: var(--ink);
+}
+
+.photo-credit {
+  position: absolute;
+  z-index: 3;
+
+  right: 20px;
+  bottom: 12px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, .85);
+  font-size: .62rem;
 }
 
 
-/* --------------------------------------------------
-   ALL SECTIONS
-   Consistent vertical rhythm
-   -------------------------------------------------- */
+/* ==================================================
+   GENERAL SECTIONS
+   ================================================== */
 
 .section {
-  padding: 100px 32px;
+  width: min(var(--max), 100%);
+  margin: auto;
+
+  padding: 105px 32px;
+}
+
+.music,
+.Shows,
+.contact {
+  border-top: 1px solid var(--line);
 }
 
 .section-title {
@@ -977,54 +285,93 @@ nav a {
 
 .section-title .eyebrow {
   margin-bottom: 10px;
-  font-size: .85rem;
+
+  font-size: .95rem;
+  font-weight: 700;
   line-height: 1.2;
+
   letter-spacing: .22em;
 }
 
 .section-title > p:not(.eyebrow) {
   margin: 0 0 12px;
+
+  color: var(--muted);
+
   font-size: 1rem;
   line-height: 1.4;
-  color: var(--muted);
 }
-
-
-/* --------------------------------------------------
-   SECTION HEADINGS
-   Strong hierarchy:
-   MUSIC / SHOWS / CONTACT = small label
-   Listen / Live Performances / Contact text = large
-   -------------------------------------------------- */
 
 h2 {
+  margin: 0 0 24px;
+
+  font-family: "Playfair Display", Georgia, serif;
   font-size: clamp(2.8rem, 5.5vw, 4.8rem);
-  line-height: 1;
-  margin-bottom: 24px;
+  font-weight: 400;
+  line-height: 1.02;
 }
 
 
-/* --------------------------------------------------
-   ABOUT / MEME
-   Improve body readability and line spacing
-   -------------------------------------------------- */
+/* ==================================================
+   MEME / INTRODUCTION
+   ================================================== */
 
-.intro p:not(.eyebrow) {
+.intro {
+  display: grid;
+
+  grid-template-columns:
+    180px
+    minmax(0, 1fr);
+
+  gap: 60px;
+
+  align-items: start;
+}
+
+.intro-mark {
+  min-width: 0;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(6rem, 10vw, 10rem);
+  line-height: .75;
+
+  color: var(--earth);
+  opacity: .75;
+
+  overflow-wrap: normal;
+  white-space: nowrap;
+}
+
+.intro > div:last-child {
+  min-width: 0;
+}
+
+.intro h2 {
+  max-width: 800px;
+}
+
+.lead {
+  max-width: 780px;
+  margin: 0 0 22px;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.35rem, 2.7vw, 2.1rem);
+  line-height: 1.4;
+}
+
+.intro p:not(.lead):not(.eyebrow) {
+  max-width: 700px;
+
+  color: var(--muted);
+
   font-size: 1.05rem;
   line-height: 1.65;
 }
 
-.lead {
-  font-size: clamp(1.35rem, 2.7vw, 2.1rem);
-  line-height: 1.35;
-}
 
-
-/* --------------------------------------------------
-   MUSIC
-   "MUSIC" label stays relatively prominent
-   "Listen" becomes slightly smaller
-   -------------------------------------------------- */
+/* ==================================================
+   MUSIC / LISTEN
+   ================================================== */
 
 .music .section-title .eyebrow {
   font-size: 1rem;
@@ -1032,44 +379,80 @@ h2 {
   letter-spacing: .24em;
 }
 
+/*
+   MUSIC is deliberately more prominent than LISTEN.
+*/
+
 .music .section-title h2 {
-  font-size: clamp(2.4rem, 4.8vw, 4rem);
+  font-size: clamp(2.45rem, 4.8vw, 4rem);
   line-height: 1;
   margin-bottom: 0;
 }
 
 
-/* --------------------------------------------------
-   MUSIC TRACKS
-   More compact vertical spacing
-   -------------------------------------------------- */
+/* Track layout */
 
 .player-card {
-  padding: 19px 0;
+  display: grid;
+
+  grid-template-columns:
+    65px
+    minmax(0, 1fr)
+    minmax(260px, 1.15fr);
+
   gap: 22px;
+
+  align-items: center;
+
+  padding: 18px 0;
+
+  border-top: 1px solid var(--line);
+}
+
+.player-card:last-child {
+  border-bottom: 1px solid var(--line);
 }
 
 .track-number {
+  font-family: "Playfair Display", Georgia, serif;
   font-size: 1.65rem;
   line-height: 1;
+
+  color: var(--earth);
+}
+
+.track-info {
+  min-width: 0;
 }
 
 .track-info h3 {
+  margin: 0;
+
+  font-family: "Playfair Display", Georgia, serif;
   font-size: 1.35rem;
+  font-weight: 400;
   line-height: 1.15;
 }
 
 .track-info p {
-  margin-top: 2px;
+  margin: 2px 0 0;
+
+  color: var(--muted);
   font-size: .82rem;
   line-height: 1.3;
 }
 
+.player-card audio {
+  display: block;
 
-/* --------------------------------------------------
+  width: 100%;
+  max-width: 100%;
+}
+
+
+/* ==================================================
    SHOWS
-   Apply same typographic hierarchy as MUSIC
-   -------------------------------------------------- */
+   ================================================== */
 
 .Shows .section-title .eyebrow {
   font-size: 1rem;
@@ -1078,44 +461,178 @@ h2 {
 }
 
 .Shows .section-title h2 {
-  font-size: clamp(2.4rem, 4.8vw, 4rem);
+  font-size: clamp(2.45rem, 4.8vw, 4rem);
   line-height: 1;
 }
 
 .Shows-copy {
   max-width: 650px;
   margin-bottom: 35px;
-}
 
-.Shows-copy p {
   font-family: "Playfair Display", Georgia, serif;
   font-size: 1.35rem;
   line-height: 1.45;
 }
 
+.Shows-copy p {
+  margin: 0;
+}
+
+.event-list {
+  width: 100%;
+}
+
 .event {
+  display: grid;
+
+  grid-template-columns:
+    130px
+    minmax(0, 1fr)
+    auto;
+
+  gap: 30px;
+
+  align-items: center;
+
   padding: 20px 0;
+
+  border-top: 1px solid var(--line);
+}
+
+.event:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.event-details {
+  min-width: 0;
+}
+
+.event-date strong {
+  display: block;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.event-date span {
+  font-size: .65rem;
+  letter-spacing: .12em;
 }
 
 .event h3 {
+  margin: 0;
+
+  font-family: "Playfair Display", Georgia, serif;
   font-size: 1.35rem;
+  font-weight: 400;
   line-height: 1.2;
 }
 
 .event p {
+  margin: 4px 0 0;
+
+  color: var(--muted);
   font-size: .85rem;
   line-height: 1.35;
 }
 
 .event-link {
+  white-space: nowrap;
+
   font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .15em;
 }
 
 
-/* --------------------------------------------------
+/* ==================================================
+   PHOTOGRAPHY
+   ================================================== */
+
+.photo-break {
+  position: relative;
+}
+
+.photo-break-cover {
+  overflow: hidden;
+}
+
+.photo-break-cover img {
+  display: block;
+
+  width: 100%;
+  height: min(70vh, 760px);
+
+  object-fit: cover;
+  object-position: center;
+
+  filter: saturate(.85);
+}
+
+
+/* ==================================================
+   FINAL COMPILATION-4 PHOTO
+   Full image — no cropping
+   ================================================== */
+
+.final-photo {
+  overflow: visible;
+}
+
+.final-photo img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+
+  object-fit: contain;
+  object-position: center;
+
+  filter: saturate(.85);
+}
+
+.photo-caption {
+  position: absolute;
+
+  left: 28px;
+  right: 28px;
+  bottom: 25px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 20px;
+
+  color: white;
+
+  font-size: .7rem;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+
+  text-shadow: 0 1px 8px rgba(0, 0, 0, .5);
+
+  pointer-events: none;
+}
+
+.photo-caption span {
+  overflow-wrap: break-word;
+}
+
+.final-photo .photo-caption {
+  bottom: 25px;
+}
+
+
+/* ==================================================
    CONTACT
-   Same overall hierarchy as other sections
-   -------------------------------------------------- */
+   ================================================== */
+
+.contact {
+  text-align: center;
+}
 
 .contact > .eyebrow {
   font-size: 1rem;
@@ -1124,31 +641,153 @@ h2 {
 }
 
 .contact h2 {
-  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  max-width: 900px;
+  margin: 0 auto 30px;
+
+  font-size: clamp(2.45rem, 5vw, 4.5rem);
   line-height: 1.05;
-  margin-bottom: 30px;
 }
 
+.email {
+  display: inline-block;
 
-/* --------------------------------------------------
-   SOCIAL LINKS
-   Slightly larger and easier to use
-   -------------------------------------------------- */
+  max-width: 100%;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.5rem, 4vw, 2.8rem);
+  line-height: 1.25;
+
+  border-bottom: 1px solid var(--ink);
+
+  overflow-wrap: anywhere;
+}
 
 .socials {
+  margin-top: 45px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 28px;
+
   font-size: .82rem;
+  text-transform: uppercase;
   letter-spacing: .12em;
+}
+
+.socials a {
+  transition: color .2s ease;
+}
+
+.socials a:hover {
+  color: var(--earth);
 }
 
 
 /* ==================================================
-   TABLET
+   FOOTER
    ================================================== */
 
-@media (max-width: 900px) {
+footer {
+  border-top: 1px solid var(--line);
+
+  padding: 25px 32px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  color: var(--muted);
+  font-size: .65rem;
+}
+
+
+/* ==================================================
+   LAPTOP
+   901px – 1200px
+   ================================================== */
+
+@media (min-width: 901px) and (max-width: 1200px) {
 
   .site-header {
-    padding: 34px 26px 25px;
+    padding: 34px 28px 28px;
+  }
+
+  nav {
+    gap: 24px;
+    font-size: .9rem;
+  }
+
+  .hero-content {
+    padding: 165px 28px 85px;
+  }
+
+  .section {
+    padding: 95px 28px;
+  }
+
+  /*
+     MEME remains two-column on laptop,
+     but the decorative word is reduced enough
+     that it cannot intrude into the text column.
+  */
+
+  .intro {
+    grid-template-columns:
+      145px
+      minmax(0, 1fr);
+
+    gap: 45px;
+  }
+
+  .intro-mark {
+    font-size: clamp(5.5rem, 9vw, 8rem);
+    line-height: .78;
+  }
+
+  .intro h2 {
+    font-size: clamp(2.7rem, 5vw, 4rem);
+  }
+
+  .lead {
+    font-size: clamp(1.3rem, 2.3vw, 1.8rem);
+  }
+
+  .player-card {
+    grid-template-columns:
+      60px
+      minmax(0, 1fr)
+      minmax(230px, 1fr);
+
+    gap: 18px;
+    padding: 17px 0;
+  }
+
+  .event {
+    grid-template-columns:
+      110px
+      minmax(0, 1fr)
+      auto;
+
+    gap: 22px;
+  }
+}
+
+
+/* ==================================================
+   IPAD / TABLET
+   701px – 900px
+   ================================================== */
+
+@media (min-width: 701px) and (max-width: 900px) {
+
+  .site-header {
+    padding: 32px 26px 25px;
+    gap: 25px;
   }
 
   .logo {
@@ -1156,33 +795,132 @@ h2 {
   }
 
   nav {
-    gap: 20px;
-    font-size: .9rem;
+    gap: 17px;
+    font-size: .84rem;
+    letter-spacing: .09em;
   }
 
   .hero-content {
-    padding-top: 165px;
+    padding: 160px 26px 80px;
   }
 
   .section {
-    padding: 90px 26px;
+    padding: 85px 26px;
+  }
+
+
+  /*
+     ==============================================
+     CRITICAL MEME OVERLAP FIX
+     ==============================================
+
+     At iPad widths the original 2-column layout
+     squeezed the large decorative MEME and the
+     text into insufficient horizontal space.
+
+     The decorative MEME is therefore moved above
+     the text while remaining part of the section.
+     This removes the source of the overlap.
+  */
+
+  .intro {
+    display: block;
+  }
+
+  .intro-mark {
+    width: 100%;
+
+    margin: 0 0 35px;
+
+    font-size: clamp(5rem, 13vw, 7rem);
+    line-height: .8;
+
+    white-space: nowrap;
+  }
+
+  .intro > div:last-child {
+    width: 100%;
+    max-width: 760px;
+  }
+
+  .intro h2 {
+    font-size: clamp(2.7rem, 6vw, 4.2rem);
+    line-height: 1.03;
+
+    margin-bottom: 25px;
+  }
+
+  .lead {
+    max-width: 700px;
+
+    font-size: clamp(1.35rem, 3vw, 1.9rem);
+    line-height: 1.4;
+  }
+
+  .intro p:not(.lead):not(.eyebrow) {
+    max-width: 680px;
+
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+
+  /* MUSIC */
+
+  .music .section-title h2,
+  .Shows .section-title h2 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
   }
 
   .player-card {
-    padding: 18px 0;
+    grid-template-columns:
+      55px
+      minmax(0, 1fr)
+      minmax(230px, 1fr);
+
+    gap: 17px;
+
+    padding: 17px 0;
+  }
+
+  .track-number {
+    font-size: 1.55rem;
+  }
+
+  .track-info h3 {
+    font-size: 1.25rem;
+  }
+
+
+  /* SHOWS */
+
+  .event {
+    grid-template-columns:
+      90px
+      minmax(0, 1fr)
+      auto;
+
     gap: 18px;
+  }
+
+  .event-date strong {
+    font-size: 2.2rem;
   }
 }
 
 
 /* ==================================================
    MOBILE
+   0px – 700px
    ================================================== */
 
 @media (max-width: 700px) {
 
   .site-header {
     padding: 28px 20px 22px;
+
+    align-items: flex-start;
+
     gap: 18px;
   }
 
@@ -1193,13 +931,45 @@ h2 {
 
   nav {
     gap: 9px 17px;
+
     font-size: .78rem;
+    line-height: 1.2;
     letter-spacing: .08em;
   }
 
-  .hero-content {
-    padding-top: 145px;
+
+  /* HERO */
+
+  .hero {
+    min-height: 88vh;
   }
+
+  .hero-content {
+    padding: 145px 20px 65px;
+  }
+
+  .hero h1 {
+    font-size: clamp(4.5rem, 22vw, 7rem);
+  }
+
+  .tagline {
+    max-width: 600px;
+
+    margin: 22px 0 28px;
+
+    font-size: clamp(1.25rem, 5.5vw, 1.65rem);
+    line-height: 1.3;
+  }
+
+  .photo-credit {
+    right: 15px;
+    bottom: 10px;
+
+    font-size: .55rem;
+  }
+
+
+  /* SECTIONS */
 
   .section {
     padding: 70px 20px;
@@ -1210,7 +980,7 @@ h2 {
   }
 
   .section-title .eyebrow {
-    font-size: .8rem;
+    font-size: .82rem;
     letter-spacing: .18em;
   }
 
@@ -1218,13 +988,42 @@ h2 {
     font-size: .9rem;
   }
 
+  h2 {
+    font-size: clamp(2.4rem, 11vw, 4rem);
+  }
+
+
+  /* MEME */
+
+  .intro {
+    display: block;
+  }
+
+  .intro-mark {
+    width: 100%;
+
+    margin-bottom: 28px;
+
+    font-size: clamp(4.8rem, 20vw, 6.5rem);
+    line-height: .8;
+  }
+
+  .intro h2 {
+    font-size: clamp(2.4rem, 10vw, 3.7rem);
+  }
+
+  .lead {
+    font-size: clamp(1.35rem, 6vw, 1.8rem);
+    line-height: 1.4;
+  }
+
+  .intro p:not(.lead):not(.eyebrow) {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
 
   /* MUSIC */
-
-  .music .section-title h2,
-  .Shows .section-title h2 {
-    font-size: clamp(2.2rem, 10vw, 3.2rem);
-  }
 
   .music .section-title .eyebrow,
   .Shows .section-title .eyebrow,
@@ -1232,9 +1031,23 @@ h2 {
     font-size: .85rem;
   }
 
+  .music .section-title h2,
+  .Shows .section-title h2 {
+    font-size: clamp(2.2rem, 10vw, 3.2rem);
+  }
+
   .player-card {
-    padding: 15px 0;
+    grid-template-columns:
+      45px
+      minmax(0, 1fr);
+
     gap: 10px 14px;
+
+    padding: 15px 0;
+  }
+
+  .player-card audio {
+    grid-column: 1 / -1;
   }
 
   .track-number {
@@ -1253,14 +1066,21 @@ h2 {
 
   /* SHOWS */
 
-  .Shows-copy p {
+  .Shows-copy {
     font-size: 1.15rem;
     line-height: 1.4;
   }
 
   .event {
-    padding: 16px 0;
+    grid-template-columns:
+      70px
+      minmax(0, 1fr);
+
     gap: 14px;
+
+    padding: 16px 0;
+
+    align-items: start;
   }
 
   .event-date strong {
@@ -1271,15 +1091,77 @@ h2 {
     font-size: 1.2rem;
   }
 
+  .event p {
+    font-size: .82rem;
+  }
+
+  .event-link {
+    grid-column: 2;
+
+    margin-top: 4px;
+
+    font-size: .72rem;
+  }
+
+
+  /* PHOTOGRAPHY */
+
+  .photo-break-cover img {
+    height: 55vh;
+    min-height: 300px;
+  }
+
+  .final-photo img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .photo-caption {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+
+    gap: 15px;
+
+    font-size: .58rem;
+    letter-spacing: .13em;
+  }
+
+  .final-photo .photo-caption {
+    bottom: 20px;
+  }
+
 
   /* CONTACT */
 
   .contact h2 {
     font-size: clamp(2.2rem, 9vw, 3.2rem);
+    margin-bottom: 30px;
+  }
+
+  .email {
+    font-size: clamp(1.25rem, 6vw, 1.8rem);
   }
 
   .socials {
+    margin-top: 40px;
+
+    gap: 18px 25px;
+
     font-size: .76rem;
+  }
+
+
+  /* FOOTER */
+
+  footer {
+    padding: 22px 20px;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 8px;
   }
 }
 
@@ -1292,6 +1174,11 @@ h2 {
 
   .site-header {
     padding: 24px 18px 20px;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 12px;
   }
 
   .logo {
@@ -1299,7 +1186,10 @@ h2 {
   }
 
   nav {
+    justify-content: flex-start;
+
     gap: 8px 13px;
+
     font-size: .72rem;
   }
 
@@ -1307,8 +1197,12 @@ h2 {
     padding-top: 150px;
   }
 
-  .section {
-    padding: 62px 18px;
+  .hero h1 {
+    font-size: 4.5rem;
+  }
+
+  .intro-mark {
+    font-size: 5rem;
   }
 
   .player-card {
@@ -1321,5 +1215,12 @@ h2 {
 
   .track-info h3 {
     font-size: 1.12rem;
+  }
+
+  .photo-caption {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 5px;
   }
 }
