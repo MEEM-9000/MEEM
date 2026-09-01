@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap");
 
+
 /* ==================================================
    MEEM — Elke & Mark
-   Complete responsive stylesheet
+   COMPLETE RESPONSIVE STYLESHEET
    ================================================== */
 
 
@@ -40,9 +41,11 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
+
   font-family: "DM Sans", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.65;
+
   overflow-x: hidden;
 }
 
@@ -74,6 +77,7 @@ p {
 }
 
 audio {
+  display: block;
   max-width: 100%;
 }
 
@@ -91,12 +95,13 @@ audio {
 
 
 /* ==================================================
-   HEADER
+   HEADER / NAVIGATION
    ================================================== */
 
 .site-header {
   position: absolute;
   z-index: 5;
+
   top: 0;
   left: 0;
   right: 0;
@@ -122,6 +127,7 @@ audio {
   font-size: clamp(1.55rem, 2.3vw, 2rem);
   font-weight: 700;
   line-height: 1;
+
   letter-spacing: .18em;
 }
 
@@ -135,12 +141,14 @@ nav {
 
   font-size: clamp(.9rem, 1.25vw, 1.05rem);
   line-height: 1.2;
+
   text-transform: uppercase;
   letter-spacing: .11em;
 }
 
 nav a {
   white-space: nowrap;
+
   transition: opacity .2s ease;
 }
 
@@ -202,8 +210,15 @@ nav a:hover {
   color: white;
 }
 
-.hero .eyebrow {
-  margin-bottom: 12px;
+.eyebrow {
+  margin: 0 0 12px;
+
+  font-size: .68rem;
+  font-weight: 700;
+  line-height: 1.2;
+
+  letter-spacing: .25em;
+  text-transform: uppercase;
 }
 
 .hero h1 {
@@ -214,15 +229,18 @@ nav a:hover {
   font-size: clamp(5rem, 15vw, 11rem);
   font-weight: 400;
   line-height: .83;
+
   letter-spacing: -.035em;
 }
 
 .tagline {
   max-width: 800px;
+
   margin: 25px 0 30px;
 
   font-family: "Playfair Display", Georgia, serif;
   font-style: italic;
+
   font-size: clamp(1.35rem, 3vw, 2.1rem);
   line-height: 1.3;
 }
@@ -236,7 +254,8 @@ nav a:hover {
 
   text-transform: uppercase;
   letter-spacing: .14em;
-  font-size: .72rem;
+
+  font-size: .7rem;
 
   transition:
     background .2s ease,
@@ -258,6 +277,7 @@ nav a:hover {
   margin: 0;
 
   color: rgba(255, 255, 255, .85);
+
   font-size: .62rem;
 }
 
@@ -270,7 +290,7 @@ nav a:hover {
   width: min(var(--max), 100%);
   margin: auto;
 
-  padding: 105px 32px;
+  padding: 100px 32px;
 }
 
 .music,
@@ -313,7 +333,7 @@ h2 {
 
 
 /* ==================================================
-   MEME / INTRODUCTION
+   MEME / ABOUT SECTION
    ================================================== */
 
 .intro {
@@ -332,14 +352,15 @@ h2 {
   min-width: 0;
 
   font-family: "Playfair Display", Georgia, serif;
+
   font-size: clamp(6rem, 10vw, 10rem);
   line-height: .75;
 
   color: var(--earth);
   opacity: .75;
 
-  overflow-wrap: normal;
   white-space: nowrap;
+  overflow-wrap: normal;
 }
 
 .intro > div:last-child {
@@ -352,9 +373,11 @@ h2 {
 
 .lead {
   max-width: 780px;
+
   margin: 0 0 22px;
 
   font-family: "Playfair Display", Georgia, serif;
+
   font-size: clamp(1.35rem, 2.7vw, 2.1rem);
   line-height: 1.4;
 }
@@ -373,24 +396,27 @@ h2 {
    MUSIC / LISTEN
    ================================================== */
 
+/*
+   MUSIC is deliberately prominent.
+   LISTEN remains the main heading but is
+   proportionally smaller than the MUSIC label.
+*/
+
 .music .section-title .eyebrow {
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: .24em;
 }
 
-/*
-   MUSIC is deliberately more prominent than LISTEN.
-*/
-
 .music .section-title h2 {
+  margin-bottom: 0;
+
   font-size: clamp(2.45rem, 4.8vw, 4rem);
   line-height: 1;
-  margin-bottom: 0;
 }
 
 
-/* Track layout */
+/* Track rows */
 
 .player-card {
   display: grid;
@@ -415,6 +441,7 @@ h2 {
 
 .track-number {
   font-family: "Playfair Display", Georgia, serif;
+
   font-size: 1.65rem;
   line-height: 1;
 
@@ -429,6 +456,7 @@ h2 {
   margin: 0;
 
   font-family: "Playfair Display", Georgia, serif;
+
   font-size: 1.35rem;
   font-weight: 400;
   line-height: 1.15;
@@ -438,13 +466,12 @@ h2 {
   margin: 2px 0 0;
 
   color: var(--muted);
+
   font-size: .82rem;
   line-height: 1.3;
 }
 
 .player-card audio {
-  display: block;
-
   width: 100%;
   max-width: 100%;
 }
@@ -467,9 +494,11 @@ h2 {
 
 .Shows-copy {
   max-width: 650px;
+
   margin-bottom: 35px;
 
   font-family: "Playfair Display", Georgia, serif;
+
   font-size: 1.35rem;
   line-height: 1.45;
 }
@@ -511,6 +540,7 @@ h2 {
   display: block;
 
   font-family: "Playfair Display", Georgia, serif;
+
   font-size: 2.4rem;
   line-height: 1;
 }
@@ -524,6 +554,7 @@ h2 {
   margin: 0;
 
   font-family: "Playfair Display", Georgia, serif;
+
   font-size: 1.35rem;
   font-weight: 400;
   line-height: 1.2;
@@ -533,6 +564,7 @@ h2 {
   margin: 4px 0 0;
 
   color: var(--muted);
+
   font-size: .85rem;
   line-height: 1.35;
 }
@@ -541,6 +573,7 @@ h2 {
   white-space: nowrap;
 
   font-size: .78rem;
+
   text-transform: uppercase;
   letter-spacing: .15em;
 }
@@ -549,6 +582,12 @@ h2 {
 /* ==================================================
    PHOTOGRAPHY
    ================================================== */
+
+
+/*
+   FIRST PHOTOGRAPH
+   Intentional cinematic crop.
+*/
 
 .photo-break {
   position: relative;
@@ -571,12 +610,20 @@ h2 {
 }
 
 
-/* ==================================================
-   FINAL COMPILATION-4 PHOTO
-   Full image — no cropping
-   ================================================== */
+/*
+   FINAL COMPILATION-4 PHOTOGRAPH
+
+   IMPORTANT:
+   No fixed height.
+   No object-fit: cover.
+
+   The photograph therefore keeps its
+   complete natural aspect ratio.
+*/
 
 .final-photo {
+  position: relative;
+
   overflow: visible;
 }
 
@@ -592,6 +639,9 @@ h2 {
 
   filter: saturate(.85);
 }
+
+
+/* Photo captions */
 
 .photo-caption {
   position: absolute;
@@ -609,6 +659,7 @@ h2 {
   color: white;
 
   font-size: .7rem;
+
   text-transform: uppercase;
   letter-spacing: .18em;
 
@@ -630,59 +681,135 @@ h2 {
    CONTACT
    ================================================== */
 
+/*
+   Contact introduction is deliberately smaller
+   than the main section headings.
+*/
+
 .contact {
   text-align: center;
 }
 
 .contact > .eyebrow {
-  font-size: 1rem;
+  margin-bottom: 18px;
+
+  font-size: .95rem;
   font-weight: 700;
+
   letter-spacing: .24em;
 }
 
 .contact h2 {
-  max-width: 900px;
-  margin: 0 auto 30px;
+  max-width: 850px;
 
-  font-size: clamp(2.45rem, 5vw, 4.5rem);
-  line-height: 1.05;
+  margin: 0 auto 24px;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.15;
 }
+
+
+/*
+   EMAIL
+
+   Smaller than the previous version and
+   deliberately blue to indicate a link.
+*/
 
 .email {
   display: inline-block;
 
   max-width: 100%;
 
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(1.5rem, 4vw, 2.8rem);
-  line-height: 1.25;
+  margin-top: 4px;
 
-  border-bottom: 1px solid var(--ink);
+  color: #2867b2;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(1.15rem, 2.5vw, 1.8rem);
+  line-height: 1.3;
+
+  border-bottom: 1px solid #2867b2;
 
   overflow-wrap: anywhere;
+
+  transition:
+    color .2s ease,
+    border-color .2s ease;
 }
 
+.email:hover {
+  color: #174a82;
+  border-color: #174a82;
+}
+
+
+/*
+   SOCIAL MEDIA BUTTONS
+
+   These work with the existing YouTube,
+   Instagram and SoundCloud links in index.html.
+
+   A later HTML/SVG enhancement can add the
+   official platform logos without changing
+   this layout.
+*/
+
 .socials {
-  margin-top: 45px;
+  margin-top: 42px;
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 
-  gap: 28px;
-
-  font-size: .82rem;
-  text-transform: uppercase;
-  letter-spacing: .12em;
+  gap: 18px;
 }
 
 .socials a {
-  transition: color .2s ease;
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 155px;
+
+  padding: 13px 22px;
+
+  border: 1px solid var(--line);
+
+  background: transparent;
+
+  color: var(--ink);
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: .95rem;
+  font-weight: 500;
+  line-height: 1;
+
+  text-transform: uppercase;
+  letter-spacing: .08em;
+
+  transition:
+    background .2s ease,
+    color .2s ease,
+    border-color .2s ease,
+    transform .2s ease;
 }
 
 .socials a:hover {
-  color: var(--earth);
+  background: var(--ink);
+
+  color: white;
+
+  border-color: var(--ink);
+
+  transform: translateY(-2px);
 }
 
 
@@ -702,6 +829,7 @@ footer {
   gap: 20px;
 
   color: var(--muted);
+
   font-size: .65rem;
 }
 
@@ -719,6 +847,7 @@ footer {
 
   nav {
     gap: 24px;
+
     font-size: .9rem;
   }
 
@@ -730,10 +859,13 @@ footer {
     padding: 95px 28px;
   }
 
+
   /*
-     MEME remains two-column on laptop,
-     but the decorative word is reduced enough
-     that it cannot intrude into the text column.
+     MEME OVERLAP FIX — LAPTOP
+
+     Keep the two-column design, but reduce
+     the decorative MEME width and increase
+     usable text width.
   */
 
   .intro {
@@ -757,6 +889,9 @@ footer {
     font-size: clamp(1.3rem, 2.3vw, 1.8rem);
   }
 
+
+  /* MUSIC */
+
   .player-card {
     grid-template-columns:
       60px
@@ -764,8 +899,12 @@ footer {
       minmax(230px, 1fr);
 
     gap: 18px;
+
     padding: 17px 0;
   }
+
+
+  /* SHOWS */
 
   .event {
     grid-template-columns:
@@ -787,6 +926,7 @@ footer {
 
   .site-header {
     padding: 32px 26px 25px;
+
     gap: 25px;
   }
 
@@ -796,6 +936,7 @@ footer {
 
   nav {
     gap: 17px;
+
     font-size: .84rem;
     letter-spacing: .09em;
   }
@@ -810,17 +951,15 @@ footer {
 
 
   /*
-     ==============================================
-     CRITICAL MEME OVERLAP FIX
-     ==============================================
+     CRITICAL MEME OVERLAP FIX — IPAD
 
-     At iPad widths the original 2-column layout
-     squeezed the large decorative MEME and the
-     text into insufficient horizontal space.
+     At iPad widths the original two-column
+     arrangement squeezed the decorative MEME
+     and the text into insufficient horizontal
+     space.
 
-     The decorative MEME is therefore moved above
-     the text while remaining part of the section.
-     This removes the source of the overlap.
+     The decorative MEME therefore becomes a
+     separate block above the text.
   */
 
   .intro {
@@ -906,6 +1045,29 @@ footer {
   .event-date strong {
     font-size: 2.2rem;
   }
+
+
+  /* CONTACT */
+
+  .contact h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+
+  .email {
+    font-size: 1.35rem;
+  }
+
+  .socials {
+    gap: 15px;
+  }
+
+  .socials a {
+    min-width: 145px;
+
+    padding: 12px 17px;
+
+    font-size: .9rem;
+  }
 }
 
 
@@ -934,6 +1096,7 @@ footer {
 
     font-size: .78rem;
     line-height: 1.2;
+
     letter-spacing: .08em;
   }
 
@@ -1104,12 +1267,15 @@ footer {
   }
 
 
-  /* PHOTOGRAPHY */
+  /* FIRST PHOTOGRAPH */
 
   .photo-break-cover img {
     height: 55vh;
     min-height: 300px;
   }
+
+
+  /* FINAL PHOTOGRAPH */
 
   .final-photo img {
     width: 100%;
@@ -1135,21 +1301,39 @@ footer {
 
   /* CONTACT */
 
+  .contact > .eyebrow {
+    font-size: .82rem;
+  }
+
   .contact h2 {
-    font-size: clamp(2.2rem, 9vw, 3.2rem);
-    margin-bottom: 30px;
+    max-width: 500px;
+
+    margin-bottom: 22px;
+
+    font-size: clamp(1.85rem, 8vw, 2.8rem);
+    line-height: 1.18;
   }
 
   .email {
-    font-size: clamp(1.25rem, 6vw, 1.8rem);
+    font-size: 1.15rem;
   }
 
   .socials {
-    margin-top: 40px;
+    margin-top: 35px;
 
-    gap: 18px 25px;
+    flex-direction: column;
 
-    font-size: .76rem;
+    gap: 12px;
+  }
+
+  .socials a {
+    width: min(100%, 260px);
+
+    min-width: 0;
+
+    padding: 13px 20px;
+
+    font-size: .9rem;
   }
 
 
@@ -1221,6 +1405,9 @@ footer {
     flex-direction: column;
     align-items: flex-start;
 
+    gap: 5px;
+  }
+}
     gap: 5px;
   }
 }
