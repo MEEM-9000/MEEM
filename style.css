@@ -1,14 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap");
 
-
 /* ==================================================
    MEEM — Elke & Mark
    COMPLETE RESPONSIVE STYLESHEET
-   ================================================== */
-
-
-/* ==================================================
-   VARIABLES
    ================================================== */
 
 :root {
@@ -95,7 +89,7 @@ audio {
 
 
 /* ==================================================
-   HEADER / NAVIGATION
+   HEADER
    ================================================== */
 
 .site-header {
@@ -148,7 +142,6 @@ nav {
 
 nav a {
   white-space: nowrap;
-
   transition: opacity .2s ease;
 }
 
@@ -226,6 +219,7 @@ nav a:hover {
   margin: 0;
 
   font-family: "Playfair Display", Georgia, serif;
+
   font-size: clamp(5rem, 15vw, 11rem);
   font-weight: 400;
   line-height: .83;
@@ -252,10 +246,10 @@ nav a:hover {
 
   padding: 11px 25px;
 
+  font-size: .7rem;
+
   text-transform: uppercase;
   letter-spacing: .14em;
-
-  font-size: .7rem;
 
   transition:
     background .2s ease,
@@ -326,6 +320,7 @@ h2 {
   margin: 0 0 24px;
 
   font-family: "Playfair Display", Georgia, serif;
+
   font-size: clamp(2.8rem, 5.5vw, 4.8rem);
   font-weight: 400;
   line-height: 1.02;
@@ -333,7 +328,7 @@ h2 {
 
 
 /* ==================================================
-   MEME / ABOUT SECTION
+   MEME SECTION
    ================================================== */
 
 .intro {
@@ -393,14 +388,8 @@ h2 {
 
 
 /* ==================================================
-   MUSIC / LISTEN
+   MUSIC
    ================================================== */
-
-/*
-   MUSIC is deliberately prominent.
-   LISTEN remains the main heading but is
-   proportionally smaller than the MUSIC label.
-*/
 
 .music .section-title .eyebrow {
   font-size: 1rem;
@@ -414,9 +403,6 @@ h2 {
   font-size: clamp(2.45rem, 4.8vw, 4rem);
   line-height: 1;
 }
-
-
-/* Track rows */
 
 .player-card {
   display: grid;
@@ -583,12 +569,6 @@ h2 {
    PHOTOGRAPHY
    ================================================== */
 
-
-/*
-   FIRST PHOTOGRAPH
-   Intentional cinematic crop.
-*/
-
 .photo-break {
   position: relative;
 }
@@ -610,20 +590,12 @@ h2 {
 }
 
 
-/*
+/* ==================================================
    FINAL COMPILATION-4 PHOTOGRAPH
-
-   IMPORTANT:
-   No fixed height.
-   No object-fit: cover.
-
-   The photograph therefore keeps its
-   complete natural aspect ratio.
-*/
+   ================================================== */
 
 .final-photo {
   position: relative;
-
   overflow: visible;
 }
 
@@ -639,9 +611,6 @@ h2 {
 
   filter: saturate(.85);
 }
-
-
-/* Photo captions */
 
 .photo-caption {
   position: absolute;
@@ -672,10 +641,6 @@ h2 {
   overflow-wrap: break-word;
 }
 
-.final-photo .photo-caption {
-  bottom: 25px;
-}
-
 
 /* ==================================================
    CONTACT
@@ -687,23 +652,29 @@ h2 {
 
 .contact > .eyebrow {
   margin-bottom: 15px;
+
   font-size: .9rem;
   font-weight: 700;
+
   letter-spacing: .22em;
 }
 
 .contact h2 {
   max-width: 760px;
+
   margin: 0 auto 20px;
 
   font-family: "Playfair Display", Georgia, serif;
+
   font-size: clamp(1.65rem, 3.5vw, 2.8rem);
   font-weight: 400;
   line-height: 1.2;
 }
 
 
-/* Email */
+/* ==================================================
+   EMAIL
+   ================================================== */
 
 .email {
   display: inline-block;
@@ -714,6 +685,7 @@ h2 {
   color: #2867b2;
 
   font-family: "Playfair Display", Georgia, serif;
+
   font-size: clamp(1.05rem, 2vw, 1.55rem);
   line-height: 1.3;
 
@@ -733,7 +705,7 @@ h2 {
 
 
 /* ==================================================
-   SOCIAL MEDIA BUTTONS
+   SOCIAL BUTTONS
    ================================================== */
 
 .socials {
@@ -788,132 +760,6 @@ h2 {
 
 
 /* ==================================================
-   IPAD / TABLET
-   ================================================== */
-
-@media (min-width: 701px) and (max-width: 900px) {
-
-  .contact h2 {
-    max-width: 650px;
-
-    font-size: 2rem;
-    line-height: 1.2;
-  }
-
-  .email {
-    font-size: 1.25rem;
-  }
-
-  .socials {
-    margin-top: 32px;
-    gap: 14px;
-  }
-
-  .socials a {
-    min-width: 140px;
-    padding: 11px 17px;
-    font-size: .85rem;
-  }
-}
-
-
-/* ==================================================
-   MOBILE
-   ================================================== */
-
-@media (max-width: 700px) {
-
-  .contact > .eyebrow {
-    margin-bottom: 12px;
-    font-size: .78rem;
-  }
-
-  /*
-     Smaller descriptive Contact text
-  */
-
-  .contact h2 {
-    max-width: 430px;
-
-    margin-bottom: 18px;
-
-    font-size: 1.55rem;
-    line-height: 1.25;
-  }
-
-  /*
-     Smaller email
-  */
-
-  .email {
-    font-size: 1rem;
-  }
-
-  /*
-     SOCIAL BUTTONS
-
-     Keep the same horizontal rectangular
-     appearance as laptop/tablet.
-
-     No large logos.
-     No tall buttons.
-     No full-width mobile blocks.
-  */
-
-  .socials {
-    margin-top: 30px;
-
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    gap: 10px;
-  }
-
-  .socials a {
-    width: auto;
-    min-width: 125px;
-
-    padding: 10px 15px;
-
-    font-size: .78rem;
-    line-height: 1;
-
-    letter-spacing: .07em;
-  }
-}
-
-
-/* ==================================================
-   VERY SMALL PHONES
-   ================================================== */
-
-@media (max-width: 420px) {
-
-  .contact h2 {
-    max-width: 360px;
-
-    font-size: 1.45rem;
-    line-height: 1.25;
-  }
-
-  .email {
-    font-size: .92rem;
-  }
-
-  .socials {
-    gap: 8px;
-  }
-
-  .socials a {
-    min-width: 112px;
-
-    padding: 9px 12px;
-
-    font-size: .7rem;
-  }
-}
-
-/* ==================================================
    FOOTER
    ================================================== */
 
@@ -947,7 +793,6 @@ footer {
 
   nav {
     gap: 24px;
-
     font-size: .9rem;
   }
 
@@ -960,13 +805,7 @@ footer {
   }
 
 
-  /*
-     MEME OVERLAP FIX — LAPTOP
-
-     Keep the two-column design, but reduce
-     the decorative MEME width and increase
-     usable text width.
-  */
+  /* MEME overlap prevention */
 
   .intro {
     grid-template-columns:
@@ -1026,7 +865,6 @@ footer {
 
   .site-header {
     padding: 32px 26px 25px;
-
     gap: 25px;
   }
 
@@ -1036,7 +874,6 @@ footer {
 
   nav {
     gap: 17px;
-
     font-size: .84rem;
     letter-spacing: .09em;
   }
@@ -1050,17 +887,7 @@ footer {
   }
 
 
-  /*
-     CRITICAL MEME OVERLAP FIX — IPAD
-
-     At iPad widths the original two-column
-     arrangement squeezed the decorative MEME
-     and the text into insufficient horizontal
-     space.
-
-     The decorative MEME therefore becomes a
-     separate block above the text.
-  */
+  /* MEME overlap fix */
 
   .intro {
     display: block;
@@ -1150,23 +977,26 @@ footer {
   /* CONTACT */
 
   .contact h2 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    max-width: 650px;
+
+    font-size: 2rem;
   }
 
   .email {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
   }
 
   .socials {
-    gap: 15px;
+    margin-top: 32px;
+    gap: 14px;
   }
 
   .socials a {
-    min-width: 145px;
+    min-width: 140px;
 
-    padding: 12px 17px;
+    padding: 11px 17px;
 
-    font-size: .9rem;
+    font-size: .85rem;
   }
 }
 
@@ -1367,15 +1197,12 @@ footer {
   }
 
 
-  /* FIRST PHOTOGRAPH */
+  /* PHOTOGRAPHY */
 
   .photo-break-cover img {
     height: 55vh;
     min-height: 300px;
   }
-
-
-  /* FINAL PHOTOGRAPH */
 
   .final-photo img {
     width: 100%;
@@ -1394,46 +1221,69 @@ footer {
     letter-spacing: .13em;
   }
 
-  .final-photo .photo-caption {
-    bottom: 20px;
-  }
 
-
-  /* CONTACT */
+  /* ==================================================
+     CONTACT — MOBILE
+     ================================================== */
 
   .contact > .eyebrow {
-    font-size: .82rem;
+    margin-bottom: 12px;
+    font-size: .78rem;
   }
 
   .contact h2 {
-    max-width: 500px;
+    max-width: 430px;
 
-    margin-bottom: 22px;
+    margin-bottom: 18px;
 
-    font-size: clamp(1.85rem, 8vw, 2.8rem);
-    line-height: 1.18;
+    font-size: 1.55rem;
+    line-height: 1.25;
   }
 
   .email {
-    font-size: 1.15rem;
+    font-size: 1rem;
   }
 
+
+  /*
+     SOCIAL BUTTONS
+
+     IMPORTANT:
+     No logos/SVGs are displayed or sized here.
+
+     The buttons remain small horizontal boxes,
+     matching the laptop appearance.
+  */
+
   .socials {
-    margin-top: 35px;
+    margin-top: 30px;
 
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 
-    gap: 12px;
+    gap: 10px;
   }
 
   .socials a {
-    width: min(100%, 260px);
+    width: auto;
+    min-width: 125px;
 
-    min-width: 0;
+    padding: 10px 15px;
 
-    padding: 13px 20px;
+    font-size: .78rem;
+    line-height: 1;
 
-    font-size: .9rem;
+    letter-spacing: .07em;
+  }
+
+  /*
+     If SVG logos exist in the HTML, hide them
+     completely on mobile so they cannot interfere
+     with the layout.
+  */
+
+  .socials a svg {
+    display: none !important;
   }
 
 
@@ -1501,13 +1351,36 @@ footer {
     font-size: 1.12rem;
   }
 
+
+  /* CONTACT */
+
+  .contact h2 {
+    max-width: 360px;
+
+    font-size: 1.45rem;
+    line-height: 1.25;
+  }
+
+  .email {
+    font-size: .92rem;
+  }
+
+  .socials {
+    gap: 8px;
+  }
+
+  .socials a {
+    min-width: 112px;
+
+    padding: 9px 12px;
+
+    font-size: .7rem;
+  }
+
   .photo-caption {
     flex-direction: column;
     align-items: flex-start;
 
-    gap: 5px;
-  }
-}
     gap: 5px;
   }
 }
