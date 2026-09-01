@@ -916,3 +916,410 @@ gap: 5px;
 }
 
 }
+==============================================
+
+/* ==================================================
+   MEEM TYPOGRAPHY & NAVIGATION REFINEMENT
+   September 2026
+   ================================================== */
+
+
+/* --------------------------------------------------
+   HEADER / MAIN NAVIGATION
+   Larger, more readable and better positioned
+   -------------------------------------------------- */
+
+.site-header {
+  padding: 38px 32px 28px;
+}
+
+.logo {
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  line-height: 1;
+  letter-spacing: .18em;
+}
+
+nav {
+  gap: clamp(22px, 3vw, 38px);
+  font-size: clamp(.9rem, 1.25vw, 1.05rem);
+  line-height: 1.2;
+  letter-spacing: .11em;
+}
+
+nav a {
+  white-space: nowrap;
+}
+
+
+/* --------------------------------------------------
+   HERO
+   Keep the main MEME title dominant
+   while giving the header more breathing room
+   -------------------------------------------------- */
+
+.hero-content {
+  padding-top: 175px;
+}
+
+
+/* --------------------------------------------------
+   ALL SECTIONS
+   Consistent vertical rhythm
+   -------------------------------------------------- */
+
+.section {
+  padding: 100px 32px;
+}
+
+.section-title {
+  margin-bottom: 42px;
+}
+
+.section-title .eyebrow {
+  margin-bottom: 10px;
+  font-size: .85rem;
+  line-height: 1.2;
+  letter-spacing: .22em;
+}
+
+.section-title > p:not(.eyebrow) {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+
+/* --------------------------------------------------
+   SECTION HEADINGS
+   Strong hierarchy:
+   MUSIC / SHOWS / CONTACT = small label
+   Listen / Live Performances / Contact text = large
+   -------------------------------------------------- */
+
+h2 {
+  font-size: clamp(2.8rem, 5.5vw, 4.8rem);
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+
+/* --------------------------------------------------
+   ABOUT / MEME
+   Improve body readability and line spacing
+   -------------------------------------------------- */
+
+.intro p:not(.eyebrow) {
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.lead {
+  font-size: clamp(1.35rem, 2.7vw, 2.1rem);
+  line-height: 1.35;
+}
+
+
+/* --------------------------------------------------
+   MUSIC
+   "MUSIC" label stays relatively prominent
+   "Listen" becomes slightly smaller
+   -------------------------------------------------- */
+
+.music .section-title .eyebrow {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .24em;
+}
+
+.music .section-title h2 {
+  font-size: clamp(2.4rem, 4.8vw, 4rem);
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+
+/* --------------------------------------------------
+   MUSIC TRACKS
+   More compact vertical spacing
+   -------------------------------------------------- */
+
+.player-card {
+  padding: 19px 0;
+  gap: 22px;
+}
+
+.track-number {
+  font-size: 1.65rem;
+  line-height: 1;
+}
+
+.track-info h3 {
+  font-size: 1.35rem;
+  line-height: 1.15;
+}
+
+.track-info p {
+  margin-top: 2px;
+  font-size: .82rem;
+  line-height: 1.3;
+}
+
+
+/* --------------------------------------------------
+   SHOWS
+   Apply same typographic hierarchy as MUSIC
+   -------------------------------------------------- */
+
+.Shows .section-title .eyebrow {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .24em;
+}
+
+.Shows .section-title h2 {
+  font-size: clamp(2.4rem, 4.8vw, 4rem);
+  line-height: 1;
+}
+
+.Shows-copy {
+  max-width: 650px;
+  margin-bottom: 35px;
+}
+
+.Shows-copy p {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.35rem;
+  line-height: 1.45;
+}
+
+.event {
+  padding: 20px 0;
+}
+
+.event h3 {
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.event p {
+  font-size: .85rem;
+  line-height: 1.35;
+}
+
+.event-link {
+  font-size: .78rem;
+}
+
+
+/* --------------------------------------------------
+   CONTACT
+   Same overall hierarchy as other sections
+   -------------------------------------------------- */
+
+.contact > .eyebrow {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .24em;
+}
+
+.contact h2 {
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  margin-bottom: 30px;
+}
+
+
+/* --------------------------------------------------
+   SOCIAL LINKS
+   Slightly larger and easier to use
+   -------------------------------------------------- */
+
+.socials {
+  font-size: .82rem;
+  letter-spacing: .12em;
+}
+
+
+/* ==================================================
+   TABLET
+   ================================================== */
+
+@media (max-width: 900px) {
+
+  .site-header {
+    padding: 34px 26px 25px;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+  }
+
+  nav {
+    gap: 20px;
+    font-size: .9rem;
+  }
+
+  .hero-content {
+    padding-top: 165px;
+  }
+
+  .section {
+    padding: 90px 26px;
+  }
+
+  .player-card {
+    padding: 18px 0;
+    gap: 18px;
+  }
+}
+
+
+/* ==================================================
+   MOBILE
+   ================================================== */
+
+@media (max-width: 700px) {
+
+  .site-header {
+    padding: 28px 20px 22px;
+    gap: 18px;
+  }
+
+  .logo {
+    font-size: 1.45rem;
+    letter-spacing: .16em;
+  }
+
+  nav {
+    gap: 9px 17px;
+    font-size: .78rem;
+    letter-spacing: .08em;
+  }
+
+  .hero-content {
+    padding-top: 145px;
+  }
+
+  .section {
+    padding: 70px 20px;
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .section-title .eyebrow {
+    font-size: .8rem;
+    letter-spacing: .18em;
+  }
+
+  .section-title > p:not(.eyebrow) {
+    font-size: .9rem;
+  }
+
+
+  /* MUSIC */
+
+  .music .section-title h2,
+  .Shows .section-title h2 {
+    font-size: clamp(2.2rem, 10vw, 3.2rem);
+  }
+
+  .music .section-title .eyebrow,
+  .Shows .section-title .eyebrow,
+  .contact > .eyebrow {
+    font-size: .85rem;
+  }
+
+  .player-card {
+    padding: 15px 0;
+    gap: 10px 14px;
+  }
+
+  .track-number {
+    font-size: 1.4rem;
+  }
+
+  .track-info h3 {
+    font-size: 1.2rem;
+    line-height: 1.1;
+  }
+
+  .track-info p {
+    font-size: .78rem;
+  }
+
+
+  /* SHOWS */
+
+  .Shows-copy p {
+    font-size: 1.15rem;
+    line-height: 1.4;
+  }
+
+  .event {
+    padding: 16px 0;
+    gap: 14px;
+  }
+
+  .event-date strong {
+    font-size: 1.9rem;
+  }
+
+  .event h3 {
+    font-size: 1.2rem;
+  }
+
+
+  /* CONTACT */
+
+  .contact h2 {
+    font-size: clamp(2.2rem, 9vw, 3.2rem);
+  }
+
+  .socials {
+    font-size: .76rem;
+  }
+}
+
+
+/* ==================================================
+   VERY SMALL PHONES
+   ================================================== */
+
+@media (max-width: 420px) {
+
+  .site-header {
+    padding: 24px 18px 20px;
+  }
+
+  .logo {
+    font-size: 1.35rem;
+  }
+
+  nav {
+    gap: 8px 13px;
+    font-size: .72rem;
+  }
+
+  .hero-content {
+    padding-top: 150px;
+  }
+
+  .section {
+    padding: 62px 18px;
+  }
+
+  .player-card {
+    padding: 13px 0;
+  }
+
+  .track-number {
+    font-size: 1.3rem;
+  }
+
+  .track-info h3 {
+    font-size: 1.12rem;
+  }
+}
