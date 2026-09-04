@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://meem-9000.github.io/MEEM/sitemap.xml
+Sitemap: https://meem-9000.github.io/MEME/sitemap.xml
