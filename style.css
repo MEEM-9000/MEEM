@@ -1,10 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
 
-/* ==================================================
-   MEME — Elke & Mark
-   COMPLETE RESPONSIVE STYLESHEET
-   Laptop • iPad • Tablet • Mobile
-   ================================================== */
 
 :root {
   --paper: #f1eee7;
@@ -18,30 +13,23 @@
 
 
 /* ==================================================
-   GLOBAL RESET
+   RESET
    ================================================== */
 
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 90px;
 }
 
 body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-
-  font-family: "DM Sans", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.65;
-
-  overflow-x: hidden;
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.6;
 }
 
 img {
@@ -54,96 +42,87 @@ a {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-p {
-  overflow-wrap: break-word;
-}
-
-h1,
-h2,
-h3 {
-  text-wrap: balance;
-}
-
-p {
-  margin-top: 0;
-}
-
-audio {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-}
-
-#MEME,
-#listen,
-#Shows,
-#contact {
-  scroll-margin-top: 90px;
-}
-
 
 /* ==================================================
-   HEADER / TOP NAVIGATION
+   HEADER
    ================================================== */
 
 .site-header {
-  position: absolute;
-  z-index: 10;
-
-  top: 0;
-  left: 50%;
-  right: auto;
-
-  width: min(var(--max), 100%);
-  transform: translateX(-50%);
-
-  padding: 38px 32px 30px;
+  position: relative;
+  z-index: 20;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  gap: 40px;
+  max-width: var(--max);
+  margin: 0 auto;
 
-  color: white;
+  padding: 24px 32px;
 }
 
 .logo {
-  flex: 0 0 auto;
-
-  font-size: clamp(1.55rem, 2.3vw, 2rem);
+  font-size: 1.4rem;
   font-weight: 700;
-  line-height: 1;
-  letter-spacing: .18em;
+  letter-spacing: 0.08em;
 }
 
 nav {
-  min-width: 0;
-
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-
-  gap: clamp(22px, 3vw, 38px);
-
-  font-size: clamp(.9rem, 1.25vw, 1.05rem);
-  line-height: 1.2;
-
-  text-transform: uppercase;
-  letter-spacing: .11em;
+  gap: 28px;
 }
 
 nav a {
-  white-space: nowrap;
-  transition: opacity .2s ease;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 nav a:hover {
-  opacity: .65;
+  color: var(--earth);
+}
+
+
+/* ==================================================
+   GENERAL
+   ================================================== */
+
+.section {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 100px 32px;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  color: var(--muted);
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: clamp(2.3rem, 5vw, 4.2rem);
+  line-height: 1.05;
+}
+
+p {
+  max-width: 720px;
 }
 
 
@@ -154,18 +133,18 @@ nav a:hover {
 .hero {
   position: relative;
 
-  min-height: 92vh;
+  min-height: 82vh;
 
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
 
   overflow: hidden;
-
-  background: #333;
 }
 
 .hero-image {
   position: absolute;
+
   inset: 0;
 
   width: 100%;
@@ -177,81 +156,61 @@ nav a:hover {
 
 .hero-overlay {
   position: absolute;
+
   inset: 0;
 
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0, 0, 0, .35) 0%,
-      rgba(0, 0, 0, .06) 45%,
-      rgba(0, 0, 0, .68) 100%
-    );
+  background: rgba(0, 0, 0, 0.28);
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
 
-  width: min(var(--max), 100%);
-  margin: auto;
+  text-align: center;
 
-  padding: 175px 32px 90px;
-
-  color: white;
+  color: #fff;
 }
 
-.eyebrow {
-  margin: 0 0 12px;
-
-  font-size: .68rem;
-  font-weight: 700;
-  line-height: 1.2;
-
-  letter-spacing: .25em;
-  text-transform: uppercase;
+.hero-content .eyebrow {
+  color: #fff;
 }
 
 .hero h1 {
-  max-width: 100%;
   margin: 0;
 
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(5rem, 15vw, 11rem);
-  font-weight: 400;
-  line-height: .83;
-  letter-spacing: -.035em;
+  font-size: clamp(5rem, 15vw, 12rem);
+  line-height: 0.85;
+
+  letter-spacing: -0.05em;
 }
 
 .tagline {
-  max-width: 800px;
-  margin: 25px 0 30px;
+  margin: 24px 0 32px;
 
-  font-family: "Playfair Display", Georgia, serif;
-  font-style: italic;
-
-  font-size: clamp(1.35rem, 3vw, 2.1rem);
-  line-height: 1.3;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .button {
   display: inline-block;
 
-  border: 1px solid rgba(255, 255, 255, .85);
+  padding: 12px 28px;
 
-  padding: 11px 25px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
 
-  font-size: .7rem;
-
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  letter-spacing: .14em;
 
   transition:
-    background .2s ease,
-    color .2s ease;
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
 .button:hover {
-  background: white;
+  background: #fff;
   color: var(--ink);
 }
 
@@ -260,125 +219,46 @@ nav a:hover {
   z-index: 3;
 
   right: 20px;
-  bottom: 12px;
+  bottom: 14px;
 
   margin: 0;
 
-  color: rgba(255, 255, 255, .85);
+  color: #fff;
 
-  font-size: .62rem;
+  font-size: 0.65rem;
 }
 
 
 /* ==================================================
-   GENERAL SECTIONS
-   ================================================== */
-
-.section {
-  width: min(var(--max), 100%);
-  margin: auto;
-
-  padding: 100px 32px;
-}
-
-.music,
-.Shows,
-.contact {
-  border-top: 1px solid var(--line);
-}
-
-.section-title {
-  margin-bottom: 42px;
-}
-
-.section-title .eyebrow {
-  margin-bottom: 10px;
-
-  font-size: clamp(.82rem, 1.2vw, .95rem);
-  font-weight: 700;
-  line-height: 1.2;
-
-  letter-spacing: .22em;
-}
-
-.section-title > p:not(.eyebrow) {
-  margin: 0 0 12px;
-
-  color: var(--muted);
-
-  font-size: 1rem;
-  line-height: 1.4;
-}
-
-h2 {
-  margin: 0 0 24px;
-
-  font-family: "Playfair Display", Georgia, serif;
-
-  font-size: clamp(2.8rem, 5.5vw, 4.8rem);
-  font-weight: 400;
-  line-height: 1.02;
-}
-
-
-/* ==================================================
-   MEME / INTRO SECTION
+   INTRO
    ================================================== */
 
 .intro {
   display: grid;
 
-  grid-template-columns:
-    minmax(235px, 29%)
-    minmax(0, 1fr);
+  grid-template-columns: minmax(180px, 0.8fr) minmax(0, 1.6fr);
 
-  gap: 50px;
-
-  align-items: start;
+  gap: 70px;
 }
 
 .intro-mark {
-  min-width: 0;
-  width: 100%;
+  font-size: clamp(4rem, 10vw, 9rem);
+  line-height: 0.8;
 
-  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.08em;
 
-  font-size: clamp(5.2rem, 8.5vw, 8.5rem);
-  line-height: .78;
-
-  color: var(--earth);
-  opacity: .75;
-
-  white-space: nowrap;
+  color: var(--line);
 }
 
-.intro-copy {
-  min-width: 0;
-  width: 100%;
-}
-
-.intro h2 {
-  max-width: 800px;
+.intro-copy h2 {
+  margin-bottom: 32px;
 }
 
 .lead {
-  max-width: 780px;
-
-  margin: 0 0 22px;
-
-  font-family: "Playfair Display", Georgia, serif;
-
-  font-size: clamp(1.35rem, 2.7vw, 2.1rem);
-  line-height: 1.4;
-}
-
-.intro p:not(.lead):not(.eyebrow) {
-  max-width: 700px;
-
-  color: var(--muted);
-
-  font-size: 1.05rem;
-  line-height: 1.65;
+  font-family: "Playfair Display", serif;
+  font-size: 1.45rem;
+  line-height: 1.5;
 }
 
 
@@ -386,39 +266,20 @@ h2 {
    MUSIC
    ================================================== */
 
-.music .section-title {
-  margin-bottom: 42px;
-}
-
-.music .section-title .eyebrow {
-  margin-bottom: 10px;
-
-  font-size: clamp(.85rem, 1.2vw, 1rem);
-  font-weight: 700;
-
-  letter-spacing: .24em;
-}
-
-.music .section-title h2 {
-  margin: 0;
-
-  font-size: clamp(2.45rem, 4.8vw, 4rem);
-  line-height: 1.1;
+.section-title {
+  margin-bottom: 48px;
 }
 
 .player-card {
   display: grid;
 
-  grid-template-columns:
-    65px
-    minmax(0, 1fr)
-    minmax(260px, 1.15fr);
-
-  gap: 22px;
+  grid-template-columns: 70px minmax(180px, 1fr) minmax(260px, 420px);
 
   align-items: center;
 
-  padding: 18px 0;
+  gap: 30px;
+
+  padding: 26px 0;
 
   border-top: 1px solid var(--line);
 }
@@ -428,372 +289,212 @@ h2 {
 }
 
 .track-number {
-  font-family: "Playfair Display", Georgia, serif;
+  color: var(--muted);
 
-  font-size: 1.65rem;
-  line-height: 1;
-
-  color: var(--earth);
-}
-
-.track-info {
-  min-width: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
 }
 
 .track-info h3 {
-  margin: 0;
+  margin-bottom: 4px;
 
-  font-family: "Playfair Display", Georgia, serif;
-
+  font-family: "Playfair Display", serif;
   font-size: 1.35rem;
   font-weight: 400;
-  line-height: 1.15;
 }
 
 .track-info p {
-  margin: 2px 0 0;
+  margin: 0;
 
   color: var(--muted);
 
-  font-size: .82rem;
-  line-height: 1.3;
+  font-size: 0.85rem;
 }
 
-.player-card audio {
+audio {
   width: 100%;
-  max-width: 100%;
-}
-
-
-/* =========================================================
-   SHOWS / EVENTS
-   Designed to handle any number of events automatically
-   ========================================================= */
-
-.event-list {
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-/* Every event is an independent row */
-.event {
-  display: grid;
-  grid-template-columns: 130px minmax(0, 1fr) auto;
-  gap: 30px;
-  width: 100%;
-  min-width: 0;
-  margin: 0;
-  padding: 20px 0;
-  align-items: center;
-  border-top: 1px solid var(--line);
-}
-
-/* Date column */
-.event-date {
-  grid-column: 1;
-  min-width: 0;
-  width: 100%;
-}
-
-.event-date strong {
-  display: block;
-  margin: 0;
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 2.2rem;
-  font-weight: 400;
-  line-height: 1;
-}
-
-.event-date span {
-  display: block;
-  margin-top: 5px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: 0.12em;
-}
-
-/* Main event information */
-.event-details {
-  grid-column: 2;
-  min-width: 0;
-  width: 100%;
-  max-width: 100%;
-  overflow: visible;
-}
-
-.event-details h3,
-.event h3 {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 1.35rem;
-  font-weight: 400;
-  line-height: 1.2;
-
-  /* Prevent accidental vertical text */
-  writing-mode: horizontal-tb;
-  text-orientation: mixed;
-
-  /* Allow normal wrapping */
-  white-space: normal;
-  word-break: normal;
-  overflow-wrap: break-word;
-}
-
-.event-details p,
-.event p {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  margin: 6px 0 0;
-  padding: 0;
-
-  font-size: 0.95rem;
-  line-height: 1.45;
-
-  writing-mode: horizontal-tb;
-  text-orientation: mixed;
-  white-space: normal;
-  overflow-wrap: break-word;
-}
-
-/* Optional Details link/button.
-   Events without this element still work perfectly. */
-.event-link {
-  grid-column: 3;
-  min-width: max-content;
-  white-space: nowrap;
-  justify-self: end;
-  align-self: center;
-}
-
-/* =========================================================
-   LAPTOP
-   ========================================================= */
-
-@media (min-width: 901px) and (max-width: 1200px) {
-
-  .event {
-    grid-template-columns: 110px minmax(0, 1fr) auto;
-    gap: 22px;
-  }
-
-  .event-details h3,
-  .event h3 {
-    font-size: 1.3rem;
-  }
-}
-
-
-/* =========================================================
-   TABLET / iPAD
-   ========================================================= */
-
-@media (min-width: 701px) and (max-width: 900px) {
-
-  .event {
-    grid-template-columns: 90px minmax(0, 1fr) auto;
-    gap: 18px;
-    align-items: start;
-  }
-
-  .event-date strong {
-    font-size: 2rem;
-  }
-
-  .event-details h3,
-  .event h3 {
-    font-size: 1.25rem;
-  }
-
-  .event-details p,
-  .event p {
-    font-size: 0.9rem;
-  }
-
-  .event-link {
-    align-self: start;
-  }
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 700px) {
-
-  .event {
-    grid-template-columns: 70px minmax(0, 1fr);
-    gap: 14px;
-    padding: 16px 0;
-    align-items: start;
-  }
-
-  .event-date {
-    grid-column: 1;
-  }
-
-  .event-details {
-    grid-column: 2;
-  }
-
-  /*
-     The optional Details link moves underneath the
-     event information on small screens.
-  */
-  .event-link {
-    grid-column: 2;
-    min-width: 0;
-    margin-top: 8px;
-    justify-self: start;
-    white-space: normal;
-  }
-
-  .event-date strong {
-    font-size: 1.8rem;
-  }
-
-  .event-date span {
-    font-size: 0.68rem;
-    letter-spacing: 0.08em;
-  }
-
-  .event-details h3,
-  .event h3 {
-    font-size: 1.15rem;
-    line-height: 1.25;
-  }
-
-  .event-details p,
-  .event p {
-    margin-top: 5px;
-    font-size: 0.85rem;
-    line-height: 1.4;
-  }
-}
-
-
-/* =========================================================
-   VERY SMALL PHONES
-   ========================================================= */
-
-@media (max-width: 420px) {
-
-  .event {
-    grid-template-columns: 62px minmax(0, 1fr);
-    gap: 12px;
-  }
-
-  .event-date strong {
-    font-size: 1.65rem;
-  }
-
-  .event-details h3,
-  .event h3 {
-    font-size: 1.05rem;
-  }
-
-  .event-details p,
-  .event p {
-    font-size: 0.82rem;
-  }
 }
 
 
 /* ==================================================
-   PHOTOGRAPHY
+   SHOWS
+   ================================================== */
+
+.Shows-copy {
+  margin-bottom: 55px;
+}
+
+.event-list {
+  border-top: 1px solid var(--line);
+}
+
+.event {
+  display: grid;
+
+  grid-template-columns: 110px minmax(0, 1fr) auto;
+
+  align-items: center;
+
+  gap: 30px;
+
+  padding: 28px 0;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.event-date {
+  display: flex;
+  flex-direction: column;
+
+  color: var(--muted);
+
+  line-height: 1.1;
+}
+
+.event-date strong {
+  font-family: "Playfair Display", serif;
+
+  font-size: 2.4rem;
+  font-weight: 400;
+
+  color: var(--ink);
+}
+
+.event-date span {
+  margin-top: 5px;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.event-details h3 {
+  margin-bottom: 5px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 1.45rem;
+  font-weight: 400;
+}
+
+.event-details p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 0.88rem;
+}
+
+
+/* ==================================================
+   EVENT DETAILS BUTTON
+   ================================================== */
+
+.event-details-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 88px;
+
+  padding: 10px 18px;
+
+  border: 1px solid var(--ink);
+
+  background: transparent;
+
+  color: var(--ink);
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.event-details-button:hover,
+.event-details-button:focus-visible {
+  background: var(--ink);
+  color: var(--paper);
+
+  outline: none;
+}
+
+
+/* ==================================================
+   PHOTOGRAPHS
    ================================================== */
 
 .photo-break {
   position: relative;
-  width: 100%;
-}
 
-.photo-break-cover {
+  width: 100%;
+
   overflow: hidden;
 }
 
-.photo-break-cover img {
-  display: block;
+.photo-break-cover {
+  height: 72vh;
+  min-height: 480px;
+}
 
+.photo-break-cover img {
   width: 100%;
-  height: min(70vh, 760px);
+  height: 100%;
 
   object-fit: cover;
   object-position: center;
+}
 
-  filter: saturate(.85);
+.photo-caption {
+  position: absolute;
+
+  left: 30px;
+  right: 30px;
+  bottom: 25px;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: #fff;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 
 /* ==================================================
-   FINAL COMPILATION-4 PHOTOGRAPH
+   FINAL PHOTOGRAPH
    IMPORTANT:
-   Natural image height is preserved.
    No fixed height.
    No object-fit: cover.
+   The complete Compilation-4 image is retained.
    ================================================== */
 
 .final-photo {
-  position: relative;
-
-  overflow: visible;
+  height: auto;
 }
 
 .final-photo img {
   display: block;
 
   width: 100%;
-  max-width: 100%;
   height: auto;
 
   object-fit: contain;
-  object-position: center;
-
-  filter: saturate(.85);
 }
 
-
-/* ==================================================
-   PHOTO CAPTIONS
-   ================================================== */
-
-.photo-caption {
+.final-photo .photo-caption {
   position: absolute;
-
-  left: 28px;
-  right: 28px;
-  bottom: 25px;
-
-  display: flex;
-
-  justify-content: space-between;
-  align-items: flex-end;
-
-  gap: 20px;
-
-  color: white;
-
-  font-size: .7rem;
-
-  text-transform: uppercase;
-  letter-spacing: .18em;
-
-  text-shadow: 0 1px 8px rgba(0, 0, 0, .5);
-
-  pointer-events: none;
-}
-
-.photo-caption span {
-  overflow-wrap: break-word;
 }
 
 
@@ -805,127 +506,62 @@ h2 {
   text-align: center;
 }
 
-.contact > .eyebrow {
-  margin-bottom: 15px;
-
-  font-size: clamp(.78rem, 1.1vw, .9rem);
-  font-weight: 700;
-
-  letter-spacing: .22em;
+.contact > p {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contact h2 {
-  max-width: 760px;
-
-  margin: 0 auto 20px;
-
-  font-family: "Playfair Display", Georgia, serif;
-
-  font-size: clamp(1.65rem, 3.5vw, 2.8rem);
-  font-weight: 400;
-  line-height: 1.2;
+  margin-bottom: 30px;
 }
-
-
-/* ==================================================
-   EMAIL
-   ================================================== */
 
 .email {
   display: inline-block;
 
-  max-width: 100%;
+  margin-top: 12px;
 
-  margin-top: 2px;
+  font-family: "Playfair Display", serif;
 
-  color: #2867b2;
+  font-size: clamp(1.3rem, 3vw, 2rem);
 
-  font-family: "Playfair Display", Georgia, serif;
-
-  font-size: clamp(1.05rem, 2vw, 1.55rem);
-  line-height: 1.3;
-
-  border-bottom: 1px solid #2867b2;
-
-  overflow-wrap: anywhere;
-
-  transition:
-    color .2s ease,
-    border-color .2s ease;
+  border-bottom: 1px solid var(--ink);
 }
-
-.email:hover {
-  color: #174a82;
-  border-color: #174a82;
-}
-
-
-/* ==================================================
-   SOCIAL BUTTONS
-   SVG ICONS ARE DELIBERATELY HIDDEN.
-   This prevents oversized YouTube / Instagram /
-   SoundCloud logos on mobile devices.
-   ================================================== */
 
 .socials {
-  margin-top: 36px;
-
   display: flex;
 
   justify-content: center;
-  align-items: center;
-
   flex-wrap: wrap;
 
-  gap: 14px;
+  gap: 12px;
+
+  margin-top: 45px;
 }
 
-.socials a {
+.social-button {
   display: inline-flex;
-
-  min-width: 145px;
-
-  padding: 11px 20px;
 
   align-items: center;
   justify-content: center;
 
+  padding: 9px 15px;
+
   border: 1px solid var(--line);
 
-  background: transparent;
-  color: var(--ink);
+  font-size: 0.72rem;
+  font-weight: 700;
 
-  font-family: "DM Sans", Arial, sans-serif;
-
-  font-size: .9rem;
-  font-weight: 500;
-  line-height: 1;
-
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  letter-spacing: .08em;
 
   transition:
-    background .2s ease,
-    color .2s ease,
-    border-color .2s ease,
-    transform .2s ease;
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
-.socials a svg {
-  display: none !important;
-
-  width: 0 !important;
-  height: 0 !important;
-}
-
-.socials a:hover {
+.social-button:hover {
   background: var(--ink);
-
-  color: white;
-
-  border-color: var(--ink);
-
-  transform: translateY(-2px);
+  color: var(--paper);
 }
 
 
@@ -934,877 +570,206 @@ h2 {
    ================================================== */
 
 footer {
-  border-top: 1px solid var(--line);
+  max-width: var(--max);
 
-  padding: 25px 32px;
+  margin: 0 auto;
+
+  padding: 35px 32px 45px;
 
   display: flex;
-
   justify-content: space-between;
-  align-items: center;
-
   gap: 20px;
 
   color: var(--muted);
 
-  font-size: .65rem;
+  font-size: 0.7rem;
+
+  border-top: 1px solid var(--line);
 }
 
 
 /* ==================================================
-   LARGE LAPTOP
-   1001px – 1200px
+   TABLET
    ================================================== */
 
-@media (min-width: 1001px) and (max-width: 1200px) {
+@media (max-width: 800px) {
 
   .site-header {
-    padding: 34px 28px 28px;
+    padding: 20px;
   }
 
   nav {
-    gap: 24px;
-    font-size: .9rem;
+    gap: 15px;
   }
 
-  .hero-content {
-    padding: 165px 28px 85px;
-  }
-
-  .section {
-    padding: 95px 28px;
-  }
-
-  .intro {
-    grid-template-columns:
-      minmax(225px, 31%)
-      minmax(0, 1fr);
-
-    gap: 40px;
-  }
-
-  .intro-mark {
-    font-size: clamp(4.7rem, 7.4vw, 6.8rem);
-    line-height: .8;
-  }
-
-  .player-card {
-    grid-template-columns:
-      60px
-      minmax(0, 1fr)
-      minmax(230px, 1fr);
-
-    gap: 18px;
-    padding: 17px 0;
-  }
-
-  .event {
-    grid-template-columns:
-      110px
-      minmax(0, 1fr)
-      auto;
-
-    gap: 22px;
-  }
-}
-
-
-/* ==================================================
-   STANDARD LAPTOP / LANDSCAPE TABLET
-   901px – 1000px
-
-   Important for:
-   • smaller laptops
-   • iPad landscape
-   • tablets with narrow browser windows
-   ================================================== */
-
-@media (min-width: 901px) and (max-width: 1000px) {
-
-  .site-header {
-    padding: 30px 25px 25px;
-    gap: 24px;
-  }
-
-  .logo {
-    font-size: 1.55rem;
-  }
-
-  nav {
-    gap: 17px;
-    font-size: .82rem;
-    letter-spacing: .08em;
-  }
-
-  .hero-content {
-    padding: 155px 25px 75px;
-  }
-
-  .hero h1 {
-    font-size: clamp(5rem, 13vw, 8rem);
+  nav a {
+    font-size: 0.7rem;
   }
 
   .section {
-    padding: 85px 25px;
+    padding: 75px 22px;
   }
 
   .intro {
-    grid-template-columns:
-      minmax(210px, 31%)
-      minmax(0, 1fr);
-
-    gap: 32px;
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 
   .intro-mark {
-    font-size: clamp(4.5rem, 7vw, 6rem);
-    line-height: .8;
-  }
-
-  .intro h2 {
-    font-size: clamp(2.5rem, 4.8vw, 3.6rem);
-  }
-
-  .lead {
-    font-size: clamp(1.25rem, 2.2vw, 1.7rem);
+    font-size: 4.5rem;
   }
 
   .player-card {
-    grid-template-columns:
-      55px
-      minmax(0, 1fr)
-      minmax(220px, 1fr);
+    grid-template-columns: 45px 1fr;
+    gap: 15px;
+  }
 
-    gap: 16px;
+  .player-card audio {
+    grid-column: 2;
   }
 
   .event {
-    grid-template-columns:
-      95px
-      minmax(0, 1fr)
-      auto;
-
-    gap: 18px;
-  }
-}
-
-
-/* ==================================================
-   IPAD / TABLET PORTRAIT
-   701px – 900px
-   ================================================== */
-
-@media (min-width: 701px) and (max-width: 900px) {
-
-  .site-header {
-    padding: 32px 26px 25px;
-    gap: 25px;
-  }
-
-  .logo {
-    font-size: 1.6rem;
-  }
-
-  nav {
-    gap: 17px;
-    font-size: .84rem;
-    letter-spacing: .09em;
-  }
-
-  .hero-content {
-    padding: 160px 26px 80px;
-  }
-
-  .hero h1 {
-    font-size: clamp(5rem, 13vw, 8rem);
-  }
-
-  .section {
-    padding: 85px 26px;
-  }
-
-  /* ------------------------------
-     MEME
-     ------------------------------ */
-
-  .intro {
-    display: block;
-  }
-
-  .intro-mark {
-    width: 100%;
-
-    margin: 0 0 35px;
-
-    font-size: clamp(5rem, 13vw, 7rem);
-    line-height: .8;
-
-    white-space: nowrap;
-  }
-
-  .intro-copy {
-    width: 100%;
-    max-width: 760px;
-  }
-
-  .intro h2 {
-    font-size: clamp(2.7rem, 6vw, 4.2rem);
-    line-height: 1.03;
-
-    margin-bottom: 25px;
-  }
-
-  .lead {
-    max-width: 700px;
-
-    font-size: clamp(1.35rem, 3vw, 1.9rem);
-    line-height: 1.4;
-  }
-
-  .intro p:not(.lead):not(.eyebrow) {
-    max-width: 680px;
-
-    font-size: 1rem;
-    line-height: 1.65;
-  }
-
-  /* ------------------------------
-     MUSIC
-     ------------------------------ */
-
-  .music .section-title h2,
-  .Shows .section-title h2 {
-    font-size: clamp(2.35rem, 6vw, 4rem);
-  }
-
-  .player-card {
-    grid-template-columns:
-      55px
-      minmax(0, 1fr)
-      minmax(220px, 1fr);
-
-    gap: 17px;
-
-    padding: 17px 0;
-  }
-
-  .track-number {
-    font-size: 1.55rem;
-  }
-
-  .track-info h3 {
-    font-size: 1.25rem;
-  }
-
-  /* ------------------------------
-     SHOWS
-     ------------------------------ */
-
-  .Shows .section-title {
-    margin-bottom: 36px;
-  }
-
-  .Shows-copy {
-    max-width: 680px;
-
-    font-size: 1.2rem;
-    line-height: 1.5;
-  }
-
-  .event {
-    grid-template-columns:
-      90px
-      minmax(0, 1fr)
-      auto;
-
+    grid-template-columns: 80px minmax(0, 1fr) auto;
     gap: 18px;
   }
 
-  .event-date strong {
-    font-size: 2.2rem;
+  .event-details-button {
+    min-width: 78px;
+    padding: 9px 12px;
   }
 
-  /* ------------------------------
-     CONTACT
-     ------------------------------ */
-
-  .contact h2 {
-    max-width: 650px;
-
-    font-size: 2rem;
+  footer {
+    flex-direction: column;
   }
 
-  .email {
-    font-size: 1.25rem;
-  }
-
-  .socials {
-    margin-top: 32px;
-    gap: 14px;
-  }
-
-  .socials a {
-    min-width: 140px;
-    padding: 11px 17px;
-    font-size: .85rem;
-  }
 }
 
 
 /* ==================================================
    MOBILE
-   0px – 700px
    ================================================== */
 
-@media (max-width: 700px) {
-
-  /* ------------------------------
-     HEADER
-     ------------------------------ */
+@media (max-width: 600px) {
 
   .site-header {
-    left: 0;
-    right: 0;
-
-    width: 100%;
-
-    transform: none;
-
-    padding: 28px 20px 22px;
-
-    align-items: flex-start;
-
-    gap: 18px;
+    padding: 17px 18px;
   }
 
   .logo {
-    font-size: 1.45rem;
-    letter-spacing: .16em;
+    font-size: 1.15rem;
   }
 
   nav {
-    width: 100%;
-
-    justify-content: flex-start;
-
-    gap: 9px 17px;
-
-    font-size: .78rem;
-    line-height: 1.2;
-
-    letter-spacing: .08em;
+    gap: 10px;
   }
 
-  /* ------------------------------
-     HERO
-     ------------------------------ */
+  nav a {
+    font-size: 0.62rem;
+    letter-spacing: 0.05em;
+  }
 
   .hero {
-    min-height: 88vh;
-  }
-
-  .hero-content {
-    padding: 145px 20px 65px;
+    min-height: 70vh;
   }
 
   .hero h1 {
-    font-size: clamp(4.5rem, 22vw, 7rem);
+    font-size: clamp(4.5rem, 25vw, 7rem);
   }
 
   .tagline {
-    max-width: 600px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 
-    margin: 22px 0 28px;
-
-    font-size: clamp(1.25rem, 5.5vw, 1.65rem);
-    line-height: 1.3;
+    font-size: 0.75rem;
+    line-height: 1.5;
   }
-
-  .photo-credit {
-    right: 15px;
-    bottom: 10px;
-
-    font-size: .55rem;
-  }
-
-  /* ------------------------------
-     SECTIONS
-     ------------------------------ */
 
   .section {
-    padding: 70px 20px;
-  }
-
-  .section-title {
-    margin-bottom: 30px;
-  }
-
-  .section-title .eyebrow {
-    font-size: .82rem;
-    letter-spacing: .18em;
-  }
-
-  .section-title > p:not(.eyebrow) {
-    font-size: .9rem;
-  }
-
-  h2 {
-    font-size: clamp(2.4rem, 11vw, 4rem);
-    line-height: 1.05;
-  }
-
-  /* ------------------------------
-     MEME
-     ------------------------------ */
-
-  .intro {
-    display: block;
-  }
-
-  .intro-mark {
-    width: 100%;
-
-    margin-bottom: 28px;
-
-    font-size: clamp(4.8rem, 20vw, 6.5rem);
-    line-height: .8;
-
-    white-space: nowrap;
-  }
-
-  .intro-copy {
-    width: 100%;
-  }
-
-  .intro h2 {
-    font-size: clamp(2.4rem, 10vw, 3.7rem);
+    padding: 60px 18px;
   }
 
   .lead {
-    font-size: clamp(1.35rem, 6vw, 1.8rem);
-    line-height: 1.4;
-  }
-
-  .intro p:not(.lead):not(.eyebrow) {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  /* ------------------------------
-     MUSIC
-     ------------------------------ */
-
-  .music .section-title .eyebrow,
-  .Shows .section-title .eyebrow,
-  .contact > .eyebrow {
-    font-size: .85rem;
-  }
-
-  .music .section-title h2,
-  .Shows .section-title h2 {
-    font-size: clamp(2.2rem, 10vw, 3.2rem);
-    line-height: 1.1;
+    font-size: 1.2rem;
   }
 
   .player-card {
-    grid-template-columns:
-      45px
-      minmax(0, 1fr);
+    grid-template-columns: 34px 1fr;
 
-    gap: 10px 14px;
-
-    padding: 15px 0;
-  }
-
-  .player-card audio {
-    grid-column: 1 / -1;
-  }
-
-  .track-number {
-    font-size: 1.4rem;
+    padding: 23px 0;
   }
 
   .track-info h3 {
     font-size: 1.2rem;
-    line-height: 1.1;
   }
 
   .track-info p {
-    font-size: .78rem;
-  }
-
-  /* ------------------------------
-     SHOWS
-     ------------------------------ */
-
-  .Shows .section-title {
-    margin-bottom: 30px;
-  }
-
-  .Shows-copy {
-    margin-bottom: 28px;
-
-    font-size: 1.1rem;
-    line-height: 1.45;
+    font-size: 0.78rem;
   }
 
   .event {
-    grid-template-columns:
-      70px
-      minmax(0, 1fr);
+    grid-template-columns: 55px minmax(0, 1fr);
 
-    gap: 14px;
+    gap: 12px;
 
-    padding: 16px 0;
-
-    align-items: start;
+    padding: 24px 0;
   }
 
   .event-date strong {
-    font-size: 1.9rem;
-  }
-
-  .event h3 {
-    font-size: 1.2rem;
-  }
-
-  .event p {
-    font-size: .82rem;
-  }
-
-  .event-link {
-    grid-column: 2;
-
-    margin-top: 4px;
-
-    font-size: .72rem;
-  }
-
-  /* ------------------------------
-     PHOTOGRAPHY
-     ------------------------------ */
-
-  .photo-break-cover img {
-    width: 100%;
-    height: 55vh;
-
-    min-height: 300px;
-
-    object-fit: cover;
-  }
-
-  /*
-     Compilation-4 remains completely uncropped.
-  */
-
-  .final-photo img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-
-    object-fit: contain;
-  }
-
-  .photo-caption {
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-
-    gap: 15px;
-
-    font-size: .58rem;
-    letter-spacing: .13em;
-  }
-
-  /* ------------------------------
-     CONTACT
-     ------------------------------ */
-
-  .contact > .eyebrow {
-    margin-bottom: 12px;
-
-    font-size: .78rem;
-  }
-
-  .contact h2 {
-    max-width: 430px;
-
-    margin-bottom: 18px;
-
-    font-size: 1.55rem;
-    line-height: 1.25;
-  }
-
-  .email {
-    font-size: 1rem;
-  }
-
-  /* ------------------------------
-     SOCIAL BUTTONS
-     ------------------------------ */
-
-  .socials {
-    margin-top: 28px;
-
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    justify-content: center;
-    align-items: center;
-
-    gap: 8px;
-  }
-
-  .socials a {
-    display: inline-flex;
-
-    width: auto;
-    min-width: 110px;
-    max-width: 135px;
-
-    height: 38px;
-
-    padding: 0 12px;
-
-    align-items: center;
-    justify-content: center;
-
-    font-size: .68rem;
-    line-height: 1;
-
-    letter-spacing: .06em;
-
-    white-space: nowrap;
-    overflow: hidden;
-
-    transform: none !important;
-  }
-
-  /*
-     Keep the actual SVG logos hidden.
-     This is intentional and prevents the
-     oversized mobile-logo problem.
-  */
-
-  .socials a svg {
-    display: none !important;
-
-    width: 0 !important;
-    height: 0 !important;
-  }
-
-  /* ------------------------------
-     FOOTER
-     ------------------------------ */
-
-  footer {
-    padding: 22px 20px;
-
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 8px;
-  }
-}
-
-
-/* ==================================================
-   VERY SMALL PHONES
-   MAXIMUM 420px
-   ================================================== */
-
-@media (max-width: 420px) {
-
-  .site-header {
-    padding: 24px 18px 20px;
-
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 12px;
-  }
-
-  .logo {
-    font-size: 1.35rem;
-  }
-
-  nav {
-    width: 100%;
-
-    justify-content: flex-start;
-
-    gap: 8px 13px;
-
-    font-size: .72rem;
-  }
-
-  .hero-content {
-    padding-top: 150px;
-  }
-
-  .hero h1 {
-    font-size: 4.5rem;
-  }
-
-  .intro-mark {
-    font-size: 5rem;
-  }
-
-  .player-card {
-    padding: 13px 0;
-  }
-
-  .track-number {
-    font-size: 1.3rem;
-  }
-
-  .track-info h3 {
-    font-size: 1.12rem;
-  }
-
-  .contact h2 {
-    max-width: 360px;
-
-    font-size: 1.45rem;
-    line-height: 1.25;
-  }
-
-  .email {
-    font-size: .92rem;
-  }
-
-  .socials {
-    gap: 7px;
-    margin-top: 25px;
-  }
-
-  .socials a {
-    min-width: 100px;
-    max-width: 120px;
-
-    height: 36px;
-
-    padding: 0 9px;
-
-    font-size: .63rem;
-    letter-spacing: .05em;
-  }
-
-  .photo-caption {
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 5px;
-  }
-}
-
-
-/* ==================================================
-   EXTRA-SMALL PHONES
-   MAXIMUM 360px
-
-   Additional protection against horizontal
-   navigation or oversized typography.
-   ================================================== */
-
-@media (max-width: 360px) {
-
-  .site-header {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  nav {
-    gap: 7px 11px;
-    font-size: .68rem;
-  }
-
-  .hero-content {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
-  .hero h1 {
-    font-size: 4rem;
-  }
-
-  .section {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
-  .intro-mark {
-    font-size: 4.6rem;
-  }
-
-  .music .section-title h2,
-  .Shows .section-title h2 {
-    font-size: 2.15rem;
-  }
-
-  .Shows-copy {
-    font-size: 1.05rem;
-  }
-
-  .event {
-    grid-template-columns:
-      62px
-      minmax(0, 1fr);
-
-    gap: 12px;
-  }
-
-  .event-date strong {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
   }
 
   .event-date span {
-    font-size: .58rem;
+    font-size: 0.55rem;
   }
 
-  .event h3 {
-    font-size: 1.1rem;
+  .event-details h3 {
+    font-size: 1.2rem;
   }
 
-  .event p {
-    font-size: .78rem;
+  .event-details p {
+    font-size: 0.76rem;
   }
 
-  .socials a {
-    min-width: 94px;
-    max-width: 112px;
+  .event-details-button {
+    grid-column: 2;
 
-    padding-left: 7px;
-    padding-right: 7px;
+    justify-self: start;
 
-    font-size: .59rem;
+    min-width: 76px;
+
+    margin-top: 6px;
+
+    padding: 8px 13px;
+
+    font-size: 0.65rem;
+  }
+
+  .photo-break-cover {
+    height: 58vh;
+    min-height: 360px;
+  }
+
+  .photo-caption {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+
+    font-size: 0.62rem;
+  }
+
+  .socials {
+    gap: 8px;
+  }
+
+  .social-button {
+    padding: 8px 11px;
+
+    font-size: 0.62rem;
   }
 
   footer {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-}
-
-
-/* ==================================================
-   ACCESSIBILITY / REDUCED MOTION
-   ================================================== */
-
-@media (prefers-reduced-motion: reduce) {
-
-  html {
-    scroll-behavior: auto;
+    padding: 30px 18px;
   }
 
-  *,
-  *::before,
-  *::after {
-    transition-duration: .01ms !important;
-    animation-duration: .01ms !important;
-    animation-iteration-count: 1 !important;
-  }
 }
