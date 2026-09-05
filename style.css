@@ -407,8 +407,6 @@ audio {
 }
 
 .event-link {
-  grid-column: 3;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -419,10 +417,12 @@ audio {
 
   padding: 0 10px;
 
+  box-sizing: border-box;
+
   border: 1px solid var(--ink);
 
-  color: var(--ink);
   background: transparent;
+  color: var(--ink);
 
   font-family: "DM Sans", Arial, sans-serif;
   font-size: .68rem;
@@ -436,6 +436,7 @@ audio {
   white-space: nowrap;
 
   justify-self: end;
+  align-self: center;
 
   transition:
     background .2s ease,
